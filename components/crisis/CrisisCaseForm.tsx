@@ -46,7 +46,7 @@ export function CrisisCaseForm() {
     try {
       const hash = await createCrisisCase(form, address as `0x${string}`);
       setTx({ status: "success", hash, fn: "create_crisis_case" });
-      setTimeout(() => router.push("/app"), 2000);
+      router.push("/app?new=1");
     } catch (err: unknown) {
       setTx({ status: "error", error: err instanceof Error ? err.message : "Transaction failed", fn: "create_crisis_case" });
     }
