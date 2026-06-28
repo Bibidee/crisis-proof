@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useParams } from "next/navigation";
 import { getCase, getResponseOption, getResponseOptionCount } from "@/lib/genlayer/crisisproof";
 import { CrisisCase, ResponseOption } from "@/lib/genlayer/types";
@@ -9,6 +9,7 @@ import { ResponseOptionCard } from "@/components/response-options/ResponseOption
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 import { ArrowLeft, Loader, LayoutGrid } from "lucide-react";
+import { pollUntilChanged } from "@/lib/utils/poll";
 
 export default function OptionsPage() {
   const { caseId } = useParams();
@@ -16,17 +17,35 @@ export default function OptionsPage() {
   const [crisisCase, setCrisisCase] = useState<CrisisCase | null>(null);
   const [options, setOptions] = useState<ResponseOption[]>([]);
   const [loading, setLoading] = useState(true);
+  const [polling, setPolling] = useState(false);
+  const countRef = useRef<number>(0);
 
   async function load() {
     setLoading(true);
     try {
       const [c, count] = await Promise.all([getCase(id), getResponseOptionCount(id)]);
       setCrisisCase(c);
+      countRef.current = count;
       const optList = await Promise.all(Array.from({ length: count }, (_, i) => getResponseOption(id, i)));
       setOptions(optList);
     } finally {
       setLoading(false);
     }
+  }
+
+  async function handleSuccess() {
+    setPolling(true);
+    const prevCount = countRef.current;
+    await pollUntilChanged(
+      () => getResponseOptionCount(id),
+      (count) => count > prevCount,
+      async (newCount) => {
+        countRef.current = newCount;
+        const optList = await Promise.all(Array.from({ length: newCount }, (_, i) => getResponseOption(id, i)));
+        setOptions(optList);
+      }
+    );
+    setPolling(false);
   }
 
   useEffect(() => { load(); }, [id]);
@@ -46,11 +65,16 @@ export default function OptionsPage() {
 
       <div className="bg-panel-charcoal border border-border-steel rounded-lg p-5">
         <p className="text-sm font-grotesk font-semibold text-cold-white mb-4">Add Response Option</p>
-        <ResponseOptionForm caseId={id} onSuccess={load} />
+        <ResponseOptionForm caseId={id} onSuccess={handleSuccess} />
       </div>
 
-      {loading ? (
-        <div className="flex items-center justify-center py-8"><Loader className="w-5 h-5 text-emergency-amber animate-spin" /></div>
+      {(loading || polling) ? (
+        <div className="flex items-center gap-3 justify-center py-8">
+          <Loader className="w-5 h-5 text-emergency-amber animate-spin" />
+          <p className="text-muted-text font-mono text-sm">
+            {polling ? "Waiting for transaction to confirm..." : "Loading..."}
+          </p>
+        </div>
       ) : (
         <div className="space-y-3">
           <p className="text-xs font-mono text-muted-text uppercase tracking-wider">Options ({options.length}/6)</p>
