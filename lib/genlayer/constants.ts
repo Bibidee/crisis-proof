@@ -19,6 +19,7 @@ export const CRISIS_TYPES = [
   "Governance attack",
   "Oracle manipulation",
   "Data breach",
+  "Financial fraud",
   "Service outage",
   "Liquidity crisis",
   "Public accusation",
