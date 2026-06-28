@@ -39,6 +39,7 @@ export const CRISIS_TYPES = [
 export const EVIDENCE_CATEGORIES = [
   "On-chain proof",
   "Technical report",
+  "Forensic report",
   "Public statement",
   "Status page",
   "Community signal",
