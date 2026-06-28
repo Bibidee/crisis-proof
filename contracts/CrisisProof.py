@@ -2,6 +2,11 @@
 
 from genlayer import *
 import json
+from datetime import datetime, timezone
+
+
+def utcnow() -> str:
+    return datetime.now(timezone.utc).isoformat()
 
 
 def to_json(value) -> str:
@@ -75,7 +80,7 @@ class CrisisProof(gl.Contract):
         assert urgency_level in ("LOW", "MEDIUM", "HIGH", "CRITICAL"), "Invalid urgency level"
 
         case_id = self.case_count
-        ts = gl.message.timestamp
+        ts = utcnow()
         owner = str(gl.message.sender_address)
 
         record = {
@@ -127,7 +132,7 @@ class CrisisProof(gl.Contract):
             "Case not open for evidence"
 
         ev_id = self._ev_count(case_id)
-        ts = gl.message.timestamp
+        ts = utcnow()
 
         record = {
             "evidence_id": ev_id,
@@ -176,7 +181,7 @@ class CrisisProof(gl.Contract):
         opt_id = self._opt_count(case_id)
         assert opt_id < 6, "Maximum 6 response options"
 
-        ts = gl.message.timestamp
+        ts = utcnow()
 
         record = {
             "option_id": opt_id,
@@ -216,7 +221,7 @@ class CrisisProof(gl.Contract):
         assert ev_count >= 1, "At least 1 evidence record required"
         assert opt_count >= 2, "At least 2 response options required"
 
-        ts = gl.message.timestamp
+        ts = utcnow()
         case["status"] = "UNDER_REVIEW"
         case["updated_at"] = ts
         self.cases[str(case_id)] = to_json(case)
@@ -396,7 +401,7 @@ class CrisisProof(gl.Contract):
         case = safe_loads(self.cases[str(case_id)], {})
         assert str(gl.message.sender_address).lower() == case.get("owner", "").lower(), "Not case owner"
         case["status"] = "CLOSED"
-        case["updated_at"] = gl.message.timestamp
+        case["updated_at"] = utcnow()
         self.cases[str(case_id)] = to_json(case)
 
     # ── Read Methods ──────────────────────────────────────────────────────────

@@ -25,8 +25,8 @@ export function mapCase(raw: unknown): CrisisCase {
     known_constraints: String(r.known_constraints ?? ""),
     evidence_summary: String(r.evidence_summary ?? ""),
     status: String(r.status ?? "DRAFT") as CrisisCase["status"],
-    created_at: Number(r.created_at ?? 0),
-    updated_at: Number(r.updated_at ?? 0),
+    created_at: r.created_at ? new Date(r.created_at as string).getTime() : 0,
+    updated_at: r.updated_at ? new Date(r.updated_at as string).getTime() : 0,
   };
 }
 
