@@ -41,6 +41,9 @@ export function EvidenceForm({ caseId, onSuccess }: Props) {
     try {
       const txHash = await addEvidence({ ...form, case_id: caseId, evidence_hash: hash }, address as `0x${string}`);
       setTx({ status: "success", hash: txHash, fn: "add_evidence" });
+      setForm({ title: "", evidence_type: "", evidence_url: "", source_name: "",
+        source_credibility_note: "", relevance: "", category: "", related_response_option_ids: "" });
+      setErrors({});
       onSuccess?.();
     } catch (err: unknown) {
       setTx({ status: "error", error: err instanceof Error ? err.message : "Failed", fn: "add_evidence" });

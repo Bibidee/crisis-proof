@@ -45,6 +45,10 @@ export function ResponseOptionForm({ caseId, onSuccess }: Props) {
     try {
       const hash = await addResponseOption({ ...form, case_id: caseId }, address as `0x${string}`);
       setTx({ status: "success", hash, fn: "add_response_option" });
+      setForm({ title: "", summary: "", action_type: "", expected_benefit: "",
+        key_risk: "", affected_stakeholders: "", time_sensitivity: "",
+        reversibility: "", communication_requirement: "", failure_conditions: "" });
+      setErrors({});
       onSuccess?.();
     } catch (err: unknown) {
       setTx({ status: "error", error: err instanceof Error ? err.message : "Failed", fn: "add_response_option" });
