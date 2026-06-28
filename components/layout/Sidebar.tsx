@@ -12,7 +12,6 @@ const nav = [
   { href: "/app/create", label: "New Crisis", icon: PlusCircle },
   { href: "/app/history", label: "History", icon: Clock },
   { href: "/app/settings", label: "Settings", icon: Settings },
-  { href: "/app/contract", label: "Contract", icon: Code2 },
 ];
 
 export function Sidebar() {
