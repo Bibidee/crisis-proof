@@ -79,9 +79,11 @@ export default function CaseDetailPage() {
         </div>
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="sm" onClick={loadAll}><RefreshCw className="w-4 h-4" /></Button>
-          <Link href={`/app/cases/${id}/review`}>
-            <Button variant="redline" size="sm">Request Review</Button>
-          </Link>
+          {!["VERDICT_ISSUED", "UNDER_REVIEW", "CLOSED"].includes(crisisCase.status) && (
+            <Link href={`/app/cases/${id}/review`}>
+              <Button variant="redline" size="sm">Request Review</Button>
+            </Link>
+          )}
         </div>
       </div>
 

@@ -96,6 +96,9 @@ export async function getLatestVerdict(
       args: [caseId],
       });
     if (!result) return null;
+    // Contract returns {"error":"no verdict"} when no verdict exists
+    const raw = typeof result === "string" ? JSON.parse(result) : result;
+    if (raw && typeof raw === "object" && "error" in raw) return null;
     return mapVerdict(result);
   } catch {
     return null;
