@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CrisisProof Protocol
 
-## Getting Started
+CrisisProof is a decentralized institutional crisis decision protocol built on GenLayer. When an organization faces a critical incident — a smart contract exploit, data breach, financial fraud, or service outage — CrisisProof enables structured, evidence-backed, on-chain crisis response verdicts through GenLayer's Optimistic Democracy consensus.
 
-First, run the development server:
+Teams submit a crisis case, attach public evidence URLs, and define competing response options. GenLayer validators — acting as senior crisis analysts — evaluate the evidence, assess harm severity, operational risk, regulatory exposure, and response proportionality, then reach consensus on the recommended action.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+The result is a tamper-proof, publicly auditable crisis verdict: what to do, what not to do, when to disclose, and whether compensation is warranted — all without a central authority making the call.
+
+## Live Demo
+
+[crisis-proof.vercel.app](https://crisis-proof.vercel.app/app)
+
+## Stack
+
+- **Frontend:** Next.js 16, React 19, Tailwind CSS, TypeScript
+- **Blockchain:** GenLayer StudioNet (Chain ID 61999)
+- **SDK:** genlayer-js v1.1.8
+- **Contract:** Python Intelligent Contract — `contracts/CrisisProof.py`
+- **Wallet:** MetaMask / injected wallet
+
+## Contract
+
+Deployed on GenLayer StudioNet:
+```
+0x558970C48Ede147EA328dc09F5Ff0c394Aa2f7F7
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## How It Works
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Create a Crisis Case** — Define the incident, affected users, reported harm, urgency level, and known constraints
+2. **Submit Evidence** — Attach public URL evidence with source credibility notes and relevance context
+3. **Define Response Options** — Add 2–6 competing response strategies with expected benefits, key risks, and failure conditions
+4. **Request GenLayer Review** — Trigger Optimistic Democracy consensus across GenLayer validators
+5. **Receive Verdict** — Get a structured AI-consensus verdict: crisis classification, recommended response, disclosure timeline, risk scores, and what not to do
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Verdict Output
 
-## Learn More
+Each GenLayer verdict includes:
+- Crisis classification and recommended response option
+- Confidence score (0–100)
+- Harm severity, user impact, operational/reputation/regulatory risk
+- Response proportionality assessment
+- Disclosure recommendation and compensation review status
+- Key supporting and contradictory evidence
+- Evidence gaps and follow-up actions needed
 
-To learn more about Next.js, take a look at the following resources:
+## Local Development
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm install
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Create `.env.local`:
+```
+NEXT_PUBLIC_GENLAYER_RPC_URL=https://studio.genlayer.com/api
+NEXT_PUBLIC_GENLAYER_CHAIN_ID=61999
+NEXT_PUBLIC_GENLAYER_EXPLORER_URL=https://explorer-studio.genlayer.com
+NEXT_PUBLIC_CRISISPROOF_CONTRACT_ADDRESS=0x558970C48Ede147EA328dc09F5Ff0c394Aa2f7F7
+```
 
-## Deploy on Vercel
+Open [http://localhost:3000](http://localhost:3000)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Wallet Setup
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Install MetaMask
+- Add StudioNet: RPC `https://studio.genlayer.com/api`, Chain ID `61999`
+- Get GEN tokens from the GenLayer faucet
