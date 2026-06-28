@@ -1,18 +1,17 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { useWallet } from "@/lib/context/WalletContext";
 import { getUserCaseIds, getCase } from "@/lib/genlayer/crisisproof";
 import { hasContract } from "@/lib/genlayer/client";
 import { CrisisCase } from "@/lib/genlayer/types";
-import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { statusColor, urgencyBg, formatDate } from "@/lib/utils/formatting";
 import Link from "next/link";
-import { PlusCircle, Shield, Loader, AlertTriangle, RefreshCw } from "lucide-react";
+import { PlusCircle, Shield, Loader, AlertTriangle } from "lucide-react";
 
-export default function DashboardPage() {
+function Dashboard() {
   const { address, connected } = useWallet();
   const searchParams = useSearchParams();
   const isNewCase = searchParams.get("new") === "1";
@@ -31,7 +30,6 @@ export default function DashboardPage() {
 
   useEffect(() => {
     if (!connected || !address || !hasContract()) return;
-
     setLoading(true);
     fetchCases()
       .then((all) => {
@@ -42,7 +40,6 @@ export default function DashboardPage() {
       .finally(() => setLoading(false));
   }, [connected, address]);
 
-  // Poll after new case creation until count increases
   useEffect(() => {
     if (!isNewCase || !connected || !address || !hasContract()) return;
 
@@ -157,5 +154,18 @@ export default function DashboardPage() {
         </div>
       )}
     </div>
+  );
+}
+
+export default function DashboardPage() {
+  return (
+    <Suspense fallback={
+      <div className="flex items-center gap-3 py-12 justify-center">
+        <Loader className="w-5 h-5 text-redline animate-spin" />
+        <p className="text-muted-text font-mono">Loading...</p>
+      </div>
+    }>
+      <Dashboard />
+    </Suspense>
   );
 }
