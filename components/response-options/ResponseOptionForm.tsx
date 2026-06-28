@@ -13,8 +13,8 @@ import { TxState } from "@/lib/genlayer/types";
 import { REVERSIBILITY_OPTIONS, TIME_SENSITIVITY_OPTIONS, CONTRACT_ADDRESS } from "@/lib/genlayer/constants";
 
 const ACTION_TYPES = [
-  "Pause affected function", "Full protocol pause", "Targeted freeze", "Public disclosure",
-  "Governance escalation", "Compensation review", "Continue with monitoring",
+  "Emergency shutdown", "Pause affected function", "Full protocol pause", "Targeted freeze",
+  "Public disclosure", "Governance escalation", "Compensation review", "Continue with monitoring",
   "Request independent audit", "Reject claim", "Request more evidence", "Regulatory escalation",
 ].map((v) => ({ value: v, label: v }));
 
