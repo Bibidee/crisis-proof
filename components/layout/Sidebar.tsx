@@ -50,15 +50,6 @@ export function Sidebar() {
           );
         })}
       </nav>
-      <div className="px-3 py-3 border-t border-border-steel">
-        <Link
-          href="/app/public/demo"
-          className="flex items-center gap-2 text-xs text-muted-text hover:text-cold-white font-mono transition-colors"
-        >
-          <Globe className="w-3.5 h-3.5" />
-          Public View
-        </Link>
-      </div>
     </aside>
   );
 }
