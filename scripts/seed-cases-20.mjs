@@ -54,8 +54,15 @@ if (!existsSync(ACCOUNTS_PATH)) {
 const savedAccounts = JSON.parse(readFileSync(ACCOUNTS_PATH, "utf8"));
 
 const PACE_MS = 3000;
-const CALL_TIMEOUT_MS = 45000;
-const WAIT_OPTS = { status: TransactionStatus.ACCEPTED, retries: 60, interval: 5000 };
+// Quick calls (reads, write submission) should ack fast — a hang here is
+// a real dead connection, not normal latency.
+const QUICK_CALL_TIMEOUT_MS = 45000;
+// Waiting for FINALIZED can legitimately take minutes (consensus rounds +
+// the appeal/finality window) — this must NOT be wrapped in a short
+// timeout, or a perfectly healthy transaction gets treated as hung. Give
+// it a budget comfortably larger than its own internal retries*interval.
+const WAIT_OPTS = { status: TransactionStatus.FINALIZED, retries: 120, interval: 5000 }; // ~10 min internal budget
+const RECEIPT_TIMEOUT_MS = WAIT_OPTS.retries * WAIT_OPTS.interval + 120000; // +2 min safety margin
 
 function sleep(ms) {
   return new Promise((r) => setTimeout(r, ms));
@@ -76,11 +83,11 @@ function retryAfterSecondsFromError(err) {
   return typeof seconds === "number" ? seconds : null;
 }
 
-async function withRateLimitRetry(fn, label) {
+async function withRateLimitRetry(fn, label, timeoutMs = QUICK_CALL_TIMEOUT_MS) {
   let attempt = 0;
   for (;;) {
     try {
-      return await withTimeout(fn, CALL_TIMEOUT_MS, label);
+      return await withTimeout(fn, timeoutMs, label);
     } catch (err) {
       const msg = String(err?.message || err);
       const retryAfter = retryAfterSecondsFromError(err);
@@ -105,10 +112,13 @@ async function write(client, functionName, args, label) {
     `${label}:${functionName}`
   );
   await pace();
+  console.log(`  [${label}:${functionName}] tx ${hash} submitted — waiting for FINALIZED before continuing...`);
   await withRateLimitRetry(
     () => client.waitForTransactionReceipt({ hash, ...WAIT_OPTS }),
-    `${label}:${functionName}:receipt`
+    `${label}:${functionName}:receipt`,
+    RECEIPT_TIMEOUT_MS
   );
+  console.log(`  [${label}:${functionName}] tx ${hash} FINALIZED.`);
   await pace();
   return hash;
 }

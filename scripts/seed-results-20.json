@@ -1,0 +1,804 @@
+[
+  {
+    "caseId": 0,
+    "owner": "0x189096a1f6d1D5440e6536E87Fc9CDae221d30B6",
+    "title": "Positive feedback message misfiled as an incident ticket",
+    "targetTier": "NO_ACTION_NEEDED",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 0,
+      "compensation_review": "NOT_APPLICABLE",
+      "confidence_score": 97,
+      "created_at": "2026-07-13T09:18:13.486809+00:00",
+      "crisis_classification": "UNCONFIRMED_INCIDENT",
+      "disclosure_recommendation": "INTERNAL_ONLY",
+      "evidence_gaps": [
+        "No audit of how frequently the keyword filter produces similar false positives, which would inform the priority of option_1"
+      ],
+      "evidence_quality": "HIGH",
+      "follow_up_evidence_needed": [
+        "False-positive rate report from the auto-tagging filter over the past 30 days to assess whether filter tuning (option_1) should be prioritised"
+      ],
+      "harm_severity": "NONE",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "LOW",
+      "recommended_next_action": "Reclassify the ticket as miscategorized, close it, and send the customer a brief, warm thank-you reply acknowledging their positive feedback.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "LOW",
+      "reputation_risk": "LOW",
+      "response_proportionality": "NO_ACTION_NEEDED",
+      "short_reason": "The submitted ticket transcript confirms unambiguously that this is a positive customer message with zero harm, zero user impact, and no regulatory or reputational exposure. The only action warranted is a courteous reclassification and thank-you reply. The live source fetched from the evidence URL is a generic Wikipedia article on customer service and does not corroborate or contradict the specific ticket content, representing a citation mismatch that should be flagged internally but does not alter the verdict.",
+      "urgency_level": "LOW",
+      "user_impact": "NONE",
+      "verdict_id": 0,
+      "verdict_label": "MONITORING_SUFFICIENT",
+      "what_not_to_do": "Do not escalate this ticket further or treat it as a genuine incident, as doing so wastes resources and could confuse the customer who submitted positive feedback."
+    }
+  },
+  {
+    "caseId": 1,
+    "owner": "0xCb8749Ec93EFeeD3d65785Bd252B394548bD35Cc",
+    "title": "Scheduled maintenance window mistaken for an outage",
+    "targetTier": "NO_ACTION_NEEDED",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 1,
+      "compensation_review": "NOT_APPLICABLE",
+      "confidence_score": 95,
+      "created_at": "2026-07-13T09:23:21.775209+00:00",
+      "crisis_classification": "UNCONFIRMED_INCIDENT",
+      "disclosure_recommendation": "NO_DISCLOSURE",
+      "evidence_gaps": [
+        "None"
+      ],
+      "evidence_quality": "HIGH",
+      "follow_up_evidence_needed": [
+        "None"
+      ],
+      "harm_severity": "NONE",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "LOW",
+      "recommended_next_action": "Reply to the customer with documentation of the pre-announced maintenance window and close the ticket.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "LOW",
+      "reputation_risk": "LOW",
+      "response_proportionality": "MONITORING_SUFFICIENT",
+      "short_reason": "The incident is a result of a user misunderstanding regarding a well-communicated maintenance window. Since the service performed exactly as planned and announced, no operational or reputational harm has occurred.",
+      "urgency_level": "LOW",
+      "user_impact": "MINIMAL",
+      "verdict_id": 0,
+      "verdict_label": "MONITORING_SUFFICIENT",
+      "what_not_to_do": "Do not treat a standard, pre-announced maintenance event as an unplanned outage or service failure."
+    }
+  },
+  {
+    "caseId": 2,
+    "owner": "0xCa360741DC1AdB32BAeB1d338730098c6EDd2a54",
+    "title": "Cosmetic typo reported on a marketing landing page",
+    "targetTier": "NO_ACTION_NEEDED",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 2,
+      "compensation_review": "NOT_APPLICABLE",
+      "confidence_score": 97,
+      "created_at": "2026-07-13T09:27:27.505823+00:00",
+      "crisis_classification": "REPUTATIONAL_CRISIS",
+      "disclosure_recommendation": "INTERNAL_ONLY",
+      "evidence_gaps": [
+        "Whether the typo appears on any high-traffic or regulated customer-facing pages beyond this landing page."
+      ],
+      "evidence_quality": "MEDIUM_HIGH",
+      "follow_up_evidence_needed": [
+        "Confirmation from marketing/web operations that no other live pages contain the same typo."
+      ],
+      "harm_severity": "NONE",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "LOW",
+      "recommended_next_action": "Correct the typo in the next routine content update and confirm the page is otherwise functioning normally.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "LOW",
+      "reputation_risk": "LOW",
+      "response_proportionality": "NO_ACTION_NEEDED",
+      "short_reason": "The reported issue is a cosmetic spelling error with no functional impact, no harm, and no evidence of user or regulatory exposure. The least risky and most proportional response is to fix it during the next scheduled content update rather than deploy an out-of-cycle hotfix.",
+      "urgency_level": "LOW",
+      "user_impact": "NONE",
+      "verdict_id": 0,
+      "verdict_label": "MONITORING_SUFFICIENT",
+      "what_not_to_do": "Do not treat a minor spelling mistake as a safety, legal, or customer-impact incident."
+    }
+  },
+  {
+    "caseId": 3,
+    "owner": "0x32f387e030467fdf0d7b197a7d0E3679351AA932",
+    "title": "Fraud alert falsely flagged a routine $12 purchase",
+    "targetTier": "NO_ACTION_NEEDED",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 3,
+      "compensation_review": "NOT_APPLICABLE",
+      "confidence_score": 92,
+      "created_at": "2026-07-13T09:32:17.853769+00:00",
+      "crisis_classification": "UNCONFIRMED_INCIDENT",
+      "disclosure_recommendation": "INTERNAL_ONLY",
+      "evidence_gaps": "The live source fetched from the evidence URL is a generic Wikipedia article on fraud detection and does not corroborate the specific Fenwick Pay fraud system log; the actual internal log was not independently verifiable through the submitted URL.",
+      "evidence_quality": "MEDIUM",
+      "follow_up_evidence_needed": [
+        "Aggregate false-positive rate data for this specific merchant category code over the past 90 days to determine if a pattern exists",
+        "Customer satisfaction or complaint record to confirm no downstream dissatisfaction was reported",
+        "Fraud model version and last calibration date to assess whether periodic tuning is already scheduled"
+      ],
+      "harm_severity": "NONE",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "LOW",
+      "recommended_next_action": "Log the event as a resolved false positive in the fraud system's standard incident register and monitor aggregate false-positive rates for this merchant category over time.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "LOW",
+      "reputation_risk": "LOW",
+      "response_proportionality": "NO_ACTION_NEEDED",
+      "short_reason": "This is a low-severity, fully resolved false positive involving a single customer with no reported harm and a brief transaction delay that was corrected within minutes by normal manual review. The evidence confirms the event is consistent with expected system behavior for rare merchant category codes, and no user harm, regulatory exposure, or reputational risk has materialized. No further action beyond standard logging is proportionate or warranted at this time.",
+      "urgency_level": "LOW",
+      "user_impact": "MINIMAL",
+      "verdict_id": 0,
+      "verdict_label": "NO_ACTION_NEEDED",
+      "what_not_to_do": "Do not modify the fraud model or add allowlist entries based on a single isolated false positive, as this could marginally reduce detection sensitivity without meaningful benefit."
+    }
+  },
+  {
+    "caseId": 4,
+    "owner": "0x189096a1f6d1D5440e6536E87Fc9CDae221d30B6",
+    "title": "Slightly elevated latency on a non-critical reporting API",
+    "targetTier": "MONITORING_SUFFICIENT",
+    "status": "READY_FOR_REVIEW",
+    "verdict": {
+      "error": "no verdict"
+    }
+  },
+  {
+    "caseId": 5,
+    "owner": "0xCb8749Ec93EFeeD3d65785Bd252B394548bD35Cc",
+    "title": "Small batch of low-priority notifications delayed by 20 minutes",
+    "targetTier": "MONITORING_SUFFICIENT",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 5,
+      "compensation_review": "NOT_APPLICABLE",
+      "confidence_score": 93,
+      "created_at": "2026-07-13T09:43:24.495648+00:00",
+      "crisis_classification": "OPERATIONAL_CRISIS",
+      "disclosure_recommendation": "NO_DISCLOSURE",
+      "evidence_gaps": [
+        "No direct internal incident timeline beyond the queue graph is provided.",
+        "No confirmation is provided on root cause or whether recurrence safeguards are in place.",
+        "The linked live source is generic background on push technology and does not independently validate the incident details."
+      ],
+      "evidence_quality": "MEDIUM",
+      "follow_up_evidence_needed": [
+        "Backlog clearance confirmation and post-incident queue metrics.",
+        "A brief root-cause note on why the queue backlog occurred.",
+        "Verification that urgent or transactional notification channels were unaffected throughout the event."
+      ],
+      "harm_severity": "LOW",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "LOW",
+      "recommended_next_action": "Continue monitoring queue depth and confirm the backlog is cleared and remains limited to non-urgent notifications.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "LOW",
+      "reputation_risk": "LOW",
+      "response_proportionality": "MONITORING_SUFFICIENT",
+      "short_reason": "The reported harm is minor: about 2,000 users received non-urgent new-episode notifications roughly 20 minutes late, with no indication of safety, financial, or urgent-service impact. Available evidence supports a temporary operational backlog, so monitoring without customer communication is proportionate unless the issue recurs or spreads to urgent notification types.",
+      "urgency_level": "LOW",
+      "user_impact": "MINIMAL",
+      "verdict_id": 0,
+      "verdict_label": "MONITOR_AND_CLOSE",
+      "what_not_to_do": "Do not escalate this into a broad customer-facing incident response without evidence of ongoing or expanding impact."
+    }
+  },
+  {
+    "caseId": 6,
+    "owner": "0xCa360741DC1AdB32BAeB1d338730098c6EDd2a54",
+    "title": "One node in a redundant cluster running hot",
+    "targetTier": "MONITORING_SUFFICIENT",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 6,
+      "compensation_review": "NOT_APPLICABLE",
+      "confidence_score": 78,
+      "created_at": "2026-07-13T09:47:58.864454+00:00",
+      "crisis_classification": "UNCONFIRMED_INCIDENT",
+      "disclosure_recommendation": "INTERNAL_ONLY",
+      "evidence_gaps": [
+        "No root cause identified for the CPU spike — unknown whether it is a runaway process, memory leak, misconfigured job, or hardware degradation",
+        "No time-series trend data provided to indicate whether CPU on the hot node is stable, rising, or oscillating",
+        "No application-level logs or process-level breakdown submitted to distinguish between transient load imbalance and a deeper software fault"
+      ],
+      "evidence_quality": "MEDIUM_HIGH",
+      "follow_up_evidence_needed": [
+        "Process-level CPU breakdown on the hot node to identify the offending workload",
+        "Historical CPU trend for the hot node over the past 24-48 hours to assess trajectory",
+        "Application and system logs from the hot node covering the period since the anomaly began",
+        "Post-restart CPU telemetry to confirm resolution and rule out hardware-level fault"
+      ],
+      "harm_severity": "LOW",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "MEDIUM",
+      "recommended_next_action": "Proactively drain and restart the hot node during the current low-urgency window to resolve the anomaly cleanly before it has any chance of becoming customer-facing.",
+      "recommended_response_option_id": "option_1",
+      "regulatory_risk": "LOW",
+      "reputation_risk": "LOW",
+      "response_proportionality": "TARGETED_ACTION_REQUIRED",
+      "short_reason": "The anomaly is currently contained by load balancing with zero user impact, but at 85% CPU versus a 40-50% cluster baseline the affected node is already operating at nearly double normal load. Given the 24-hour decision window, a proactive drain-and-restart is the proportionate response: it is fully reversible, briefly reduces redundancy in a controlled way, and eliminates the risk of the node breaching capacity before a reactive response could be executed. The live source context confirms that load balancing distributes tasks across available nodes, meaning a failed or saturated node would increase pressure on the remaining five, making early remediation the more defensible posture.",
+      "urgency_level": "LOW",
+      "user_impact": "NONE",
+      "verdict_id": 0,
+      "verdict_label": "TARGETED_ACTION_REQUIRED",
+      "what_not_to_do": "Do not ignore the anomaly indefinitely under the assumption that load balancing will compensate indefinitely, as a sustained upward CPU trend could cause the node to breach capacity before a response can be mobilized."
+    }
+  },
+  {
+    "caseId": 7,
+    "owner": "0x32f387e030467fdf0d7b197a7d0E3679351AA932",
+    "title": "Isolated complaint about search result relevance",
+    "targetTier": "MONITORING_SUFFICIENT",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 7,
+      "compensation_review": "NOT_APPLICABLE",
+      "confidence_score": 91,
+      "created_at": "2026-07-13T09:52:29.964000+00:00",
+      "crisis_classification": "UNCONFIRMED_INCIDENT",
+      "disclosure_recommendation": "INTERNAL_ONLY",
+      "evidence_gaps": [
+        "Category-specific relevance and CTR data for the complained-about product category.",
+        "Seller-level impression, click, and conversion trends before and after the update.",
+        "Query-level diagnostics to determine whether ranking quality changed for representative searches in that category."
+      ],
+      "evidence_quality": "LOW",
+      "follow_up_evidence_needed": [
+        "Category-specific CTR, conversion, and relevance metrics segmented before and after the ranking update.",
+        "Sample query audits and ranking comparisons for the affected category.",
+        "Any additional seller complaints or support tickets indicating a broader pattern."
+      ],
+      "harm_severity": "LOW",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "LOW",
+      "recommended_next_action": "Break out category-level search relevance and CTR metrics for the reported product category and monitor for regression before making changes.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "LOW",
+      "reputation_risk": "LOW",
+      "response_proportionality": "MONITORING_SUFFICIENT",
+      "short_reason": "This appears to be an isolated, low-severity quality complaint with no measured aggregate harm and only one affected stakeholder reporting perceived impact. The submitted evidence is limited because it is aggregate rather than category-specific, so the most proportional response is to monitor and validate before intervening.",
+      "urgency_level": "LOW",
+      "user_impact": "MINIMAL",
+      "verdict_id": 0,
+      "verdict_label": "MONITOR_AND_VALIDATE",
+      "what_not_to_do": "Do not roll back the ranking update based on a single unverified complaint without category-specific evidence."
+    }
+  },
+  {
+    "caseId": 8,
+    "owner": "0x189096a1f6d1D5440e6536E87Fc9CDae221d30B6",
+    "title": "Checkout errors affecting a subset of users on one payment method",
+    "targetTier": "TARGETED_ACTION_REQUIRED",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 8,
+      "compensation_review": "OPEN_AFTER_EXPOSURE_CONFIRMATION",
+      "confidence_score": 84,
+      "created_at": "2026-07-13T09:57:06.434422+00:00",
+      "crisis_classification": "ACTIVE_USER_HARM_EVENT",
+      "disclosure_recommendation": "DISCLOSE_WITHIN_2_HOURS",
+      "evidence_gaps": [
+        "The exact root cause and whether the fix fully addresses the regional payment method failure are not yet confirmed."
+      ],
+      "evidence_quality": "MEDIUM",
+      "follow_up_evidence_needed": [
+        "Post-deploy checkout success rate for the affected payment method compared with baseline within the first 30-60 minutes."
+      ],
+      "harm_severity": "HIGH",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "HIGH",
+      "recommended_next_action": "Deploy the targeted fix now, while monitoring checkout success rates in real time and preparing a rollback if the failure rate does not improve.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "MEDIUM",
+      "reputation_risk": "HIGH",
+      "response_proportionality": "IMMEDIATE_INTERVENTION",
+      "short_reason": "This is an active user harm event because a clear subset of customers is unable to complete checkout, causing abandoned carts and direct revenue loss. The evidence indicates the issue is isolated to one payment method, making a targeted fix the most proportionate response versus disabling a method that many customers may rely on.",
+      "urgency_level": "HIGH",
+      "user_impact": "MATERIAL",
+      "verdict_id": 0,
+      "verdict_label": "IMMEDIATE_INTERVENTION",
+      "what_not_to_do": "Do not disable the payment method outright without confirming no viable alternative path exists, because that would block a significant customer segment."
+    }
+  },
+  {
+    "caseId": 9,
+    "owner": "0xCb8749Ec93EFeeD3d65785Bd252B394548bD35Cc",
+    "title": "One product category page intermittently returning server errors",
+    "targetTier": "TARGETED_ACTION_REQUIRED",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 9,
+      "compensation_review": "OPEN_AFTER_EXPOSURE_CONFIRMATION",
+      "confidence_score": 85,
+      "created_at": "2026-07-13T10:01:44.851912+00:00",
+      "crisis_classification": "ACTIVE_USER_HARM_EVENT",
+      "disclosure_recommendation": "DISCLOSE_WITHIN_2_HOURS",
+      "evidence_gaps": [
+        "Root cause analysis of the specific template logic failure is not yet available"
+      ],
+      "evidence_quality": "MEDIUM",
+      "follow_up_evidence_needed": [
+        "Post-rollback error rate analysis to confirm resolution",
+        "Root cause analysis of the template code failure"
+      ],
+      "harm_severity": "HIGH",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "HIGH",
+      "recommended_next_action": "Immediately initiate rollback of the Laptops page template to halt user harm.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "MEDIUM",
+      "reputation_risk": "HIGH",
+      "response_proportionality": "IMMEDIATE_INTERVENTION",
+      "short_reason": "The evidence confirms a direct correlation between the template deployment and the onset of errors, affecting a material number of users with high operational and reputational risk. A rollback is the fastest way to restore service and stop harm, despite losing an unrelated fix.",
+      "urgency_level": "HIGH",
+      "user_impact": "MATERIAL",
+      "verdict_id": 0,
+      "verdict_label": "IMMEDIATE_INTERVENTION",
+      "what_not_to_do": "Do not delay action waiting for a perfect fix that may take longer than rollback."
+    }
+  },
+  {
+    "caseId": 10,
+    "owner": "0xCa360741DC1AdB32BAeB1d338730098c6EDd2a54",
+    "title": "Discount code allowing repeated application beyond intended limit",
+    "targetTier": "TARGETED_ACTION_REQUIRED",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 10,
+      "compensation_review": "NOT_APPLICABLE",
+      "confidence_score": 88,
+      "created_at": "2026-07-13T10:07:06.254467+00:00",
+      "crisis_classification": "OPERATIONAL_CRISIS",
+      "disclosure_recommendation": "INTERNAL_ONLY",
+      "evidence_gaps": [
+        "Scope of the underlying bug across other active promo codes is not yet confirmed.",
+        "Total financial exposure and order/revenue impact have not been quantified.",
+        "Intent analysis is incomplete, so affected-account behavior cannot yet be cleanly separated into accidental versus deliberate misuse.",
+        "No evidence yet shows whether fulfilled orders can or should be reversed under current policy."
+      ],
+      "evidence_quality": "MEDIUM_HIGH",
+      "follow_up_evidence_needed": [
+        "A query of all active and recently expired promo codes for the same stacking validation defect.",
+        "A quantified loss estimate by code, account, and fulfilled order status.",
+        "A breakdown of repeat-application patterns to distinguish likely user error from intentional exploitation.",
+        "Engineering confirmation that the patch closes the root cause and not just this single code path."
+      ],
+      "harm_severity": "MEDIUM",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "HIGH",
+      "recommended_next_action": "Immediately disable the affected promo code, patch the stacking validation bug, and run a rapid audit on other active promo codes using the same logic path.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "LOW",
+      "reputation_risk": "MEDIUM",
+      "response_proportionality": "IMMEDIATE_INTERVENTION",
+      "short_reason": "This is a confirmed pricing logic failure causing direct revenue leakage, but it does not indicate broad customer harm or a safety issue. The strongest evidence is the internal usage log; the live source URL only describes coupons generally and does not independently validate the incident, so response should focus on immediate containment and targeted remediation.",
+      "urgency_level": "HIGH",
+      "user_impact": "MATERIAL",
+      "verdict_id": 0,
+      "verdict_label": "IMMEDIATE_INTERVENTION",
+      "what_not_to_do": "Do not pause all promotions or penalize all 400 accounts before confirming whether repeat use was intentional and whether the bug affects other codes."
+    }
+  },
+  {
+    "caseId": 11,
+    "owner": "0x32f387e030467fdf0d7b197a7d0E3679351AA932",
+    "title": "Regional shipping partner integration silently failing for one country",
+    "targetTier": "TARGETED_ACTION_REQUIRED",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 11,
+      "compensation_review": "OPEN_AFTER_EXPOSURE_CONFIRMATION",
+      "confidence_score": 82,
+      "created_at": "2026-07-13T10:12:13.954240+00:00",
+      "crisis_classification": "ACTIVE_USER_HARM_EVENT",
+      "disclosure_recommendation": "DISCLOSE_WITHIN_2_HOURS",
+      "evidence_gaps": "The submitted evidence URL resolves to a generic Wikipedia article on APIs rather than the actual shipping API failure log, meaning the specific backlog quantification and schema change confirmation cannot be independently corroborated from the linked source; the credibility of the 600-order figure and 2-day duration rests solely on the internal logistics team's assertion.",
+      "evidence_quality": "MEDIUM",
+      "follow_up_evidence_needed": [
+        "Confirmation of the affected country's consumer protection or e-commerce regulatory requirements regarding shipment delay notification timelines",
+        "Independent verification of the shipping API failure log via a direct internal system link rather than the Wikipedia URL submitted",
+        "Assessment of backup carrier feasibility and cost differential for the affected country in case manual processing cannot clear the backlog within 48 hours",
+        "Monitoring coverage gap analysis to determine why the schema change was not caught, to prevent recurrence"
+      ],
+      "harm_severity": "HIGH",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "HIGH",
+      "recommended_next_action": "Immediately patch the schema integration, trigger proactive customer notifications to all 600 affected order holders, and begin manual backlog processing in parallel.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "MEDIUM",
+      "reputation_risk": "HIGH",
+      "response_proportionality": "IMMEDIATE_INTERVENTION",
+      "short_reason": "Six hundred orders have gone unshipped for two days with no customer notification, constituting active and ongoing harm to a material user cohort. The root cause is technically confirmed by the engineering team's log and is directly addressable via a schema patch, making option_0 the most proportionate and complete response. The silent failure and absence of proactive communication elevate both reputational and regulatory risk, particularly if the affected country has consumer protection or e-commerce fulfilment disclosure obligations.",
+      "urgency_level": "HIGH",
+      "user_impact": "MATERIAL",
+      "verdict_id": 0,
+      "verdict_label": "IMMEDIATE_INTERVENTION",
+      "what_not_to_do": "Do not delay customer notification while waiting for the technical fix to be fully deployed, as continued silence compounds reputational and potential regulatory exposure."
+    }
+  },
+  {
+    "caseId": 12,
+    "owner": "0x189096a1f6d1D5440e6536E87Fc9CDae221d30B6",
+    "title": "Customer database exposed via misconfigured backup",
+    "targetTier": "IMMEDIATE_INTERVENTION",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 12,
+      "compensation_review": "OPEN_AFTER_EXPOSURE_CONFIRMATION",
+      "confidence_score": 90,
+      "created_at": "2026-07-13T10:16:59.303001+00:00",
+      "crisis_classification": "ACTIVE_USER_HARM_EVENT",
+      "disclosure_recommendation": "DISCLOSE_WITHIN_2_HOURS",
+      "evidence_gaps": [
+        "Whether the exposed password hashes were salted and with what algorithm",
+        "Whether payment tokens could be used for fraud or mapped back to full card data",
+        "Exact count of records accessed or exfiltrated versus merely exposed",
+        "Which customer jurisdictions are affected and the applicable notification deadlines"
+      ],
+      "evidence_quality": "MEDIUM_HIGH",
+      "follow_up_evidence_needed": [
+        "Cloud provider object access logs with object-level download counts and timestamps",
+        "Password hashing configuration details including algorithm, salting, and iteration factors",
+        "Tokenization provider assessment of whether partial payment tokens are exploitable",
+        "Jurisdictional breakdown of affected customers for regulatory notification analysis",
+        "Forensic assessment of any downstream misuse indicators such as credential stuffing or fraud spikes"
+      ],
+      "harm_severity": "HIGH",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "HIGH",
+      "recommended_next_action": "Immediately revoke public bucket access, preserve logs, initiate forced password resets, and issue a time-bounded breach disclosure within 2 hours.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "HIGH",
+      "reputation_risk": "HIGH",
+      "response_proportionality": "IMMEDIATE_INTERVENTION",
+      "short_reason": "This is a confirmed data exposure affecting about 2.1 million customers, with anonymous reads from multiple IP ranges showing the risk is not merely theoretical. The exposed fields create immediate credential-stuffing, phishing, and fraud risk, so rapid containment and disclosure are more defensible than silent containment despite peak-weekend operational constraints.",
+      "urgency_level": "CRITICAL",
+      "user_impact": "SEVERE",
+      "verdict_id": 0,
+      "verdict_label": "IMMEDIATE_INTERVENTION",
+      "what_not_to_do": "Do not delay customer and regulator notification while waiting for perfect forensic certainty after confirmed anonymous external access to sensitive customer data."
+    }
+  },
+  {
+    "caseId": 13,
+    "owner": "0xCb8749Ec93EFeeD3d65785Bd252B394548bD35Cc",
+    "title": "Ransomware encrypts internal file servers",
+    "targetTier": "IMMEDIATE_INTERVENTION",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 13,
+      "compensation_review": "OPEN_AFTER_EXPOSURE_CONFIRMATION",
+      "confidence_score": 85,
+      "created_at": "2026-07-13T10:21:41.333337+00:00",
+      "crisis_classification": "OPERATIONAL_CRISIS",
+      "disclosure_recommendation": "DISCLOSE_WITHIN_2_HOURS",
+      "evidence_gaps": "The submitted evidence URL resolves to a generic Wikipedia article on ransomware rather than the actual IT incident log or ransom note screenshot, meaning the specific encrypted file listing and ransom demand have not been independently corroborated by the live source; exfiltration status of patient records remains entirely unconfirmed; backup integrity and age have not yet been verified.",
+      "evidence_quality": "MEDIUM",
+      "follow_up_evidence_needed": [
+        "Verified backup integrity report confirming last clean backup date and completeness",
+        "Forensic confirmation of whether patient records were exfiltrated prior to encryption",
+        "Network traffic logs from the hours preceding the 3am discovery to identify lateral movement or data exfiltration indicators",
+        "Identity and variant classification of the ransomware strain to check for known decryption tools",
+        "HIPAA breach risk assessment output from legal or compliance team to determine mandatory notification obligations"
+      ],
+      "harm_severity": "HIGH",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "HIGH",
+      "recommended_next_action": "Immediately isolate all affected servers from the network, activate paper-based scheduling protocols across all six clinics, and initiate backup integrity verification in parallel with engaging an external incident response firm to assess exfiltration scope.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "HIGH",
+      "reputation_risk": "HIGH",
+      "response_proportionality": "IMMEDIATE_INTERVENTION",
+      "short_reason": "A ransomware encryption event affecting scheduling and records systems across six healthcare clinic locations constitutes a high-severity operational crisis with material patient and staff impact and significant regulatory exposure under HIPAA given the unconfirmed possibility of patient data exfiltration. Immediate server isolation and backup restoration is the most defensible first action because it limits further spread, avoids funding attackers, and preserves operational continuity via paper-based fallback. An external IR firm should be engaged concurrently rather than sequentially to preserve forensic evidence and assess exfiltration risk without delaying containment.",
+      "urgency_level": "CRITICAL",
+      "user_impact": "MATERIAL",
+      "verdict_id": 0,
+      "verdict_label": "IMMEDIATE_INTERVENTION",
+      "what_not_to_do": "Do not pay the ransom or reconnect affected servers to the network before confirming isolation, as this risks spreading encryption further and funding criminal actors without guaranteeing data recovery."
+    }
+  },
+  {
+    "caseId": 14,
+    "owner": "0xCa360741DC1AdB32BAeB1d338730098c6EDd2a54",
+    "title": "Coordinated account takeover ring drains user wallets",
+    "targetTier": "IMMEDIATE_INTERVENTION",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 14,
+      "compensation_review": "OPEN_IMMEDIATELY",
+      "confidence_score": 88,
+      "created_at": "2026-07-13T10:26:18.547465+00:00",
+      "crisis_classification": "ACTIVE_USER_HARM_EVENT",
+      "disclosure_recommendation": "DISCLOSE_WITHIN_2_HOURS",
+      "evidence_gaps": [
+        "Exact amount of user funds lost and exposure still at risk is not yet quantified.",
+        "It is not yet confirmed whether queued transfers can still settle after a freeze.",
+        "The current false-negative rate of the compromise fingerprinting model is unknown.",
+        "Root cause validation is incomplete, including whether credential stuffing was enabled by missing MFA, bot controls, or prior credential reuse."
+      ],
+      "evidence_quality": "MEDIUM_HIGH",
+      "follow_up_evidence_needed": [
+        "A real-time count and value of completed, pending, and blocked fraudulent transfers.",
+        "Validation of whether the shared IP/device fingerprint captures all known compromised sessions.",
+        "Authentication logs showing credential-stuffing volume, velocity, and geographic distribution.",
+        "Assessment of MFA coverage, bot mitigation effectiveness, and any signs of attacker persistence after session reset.",
+        "Legal and compliance assessment of notification duties for affected users and regulators."
+      ],
+      "harm_severity": "CRITICAL",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "HIGH",
+      "recommended_next_action": "Immediately halt outbound transfers platform-wide, force re-authentication, and begin rapid review to transition to narrower controls once the attack perimeter is validated.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "HIGH",
+      "reputation_risk": "HIGH",
+      "response_proportionality": "IMMEDIATE_INTERVENTION",
+      "short_reason": "This is an active fraud event causing direct financial loss to a large number of users, so speed outweighs convenience. The transfer-log anomalies and common fingerprint pattern strongly support coordinated account takeover consistent with credential stuffing, and a temporary platform-wide freeze is the most defensible immediate step given the one-hour decision window and risk of ongoing drainage.",
+      "urgency_level": "CRITICAL",
+      "user_impact": "SEVERE",
+      "verdict_id": 0,
+      "verdict_label": "IMMEDIATE_INTERVENTION",
+      "what_not_to_do": "Do not delay containment while trying to perfectly scope every compromised account because active financial harm is already occurring."
+    }
+  },
+  {
+    "caseId": 15,
+    "owner": "0x32f387e030467fdf0d7b197a7d0E3679351AA932",
+    "title": "Regulator flags undisclosed data-sharing practice",
+    "targetTier": "IMMEDIATE_INTERVENTION",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 15,
+      "compensation_review": "OPEN_AFTER_EXPOSURE_CONFIRMATION",
+      "confidence_score": 89,
+      "created_at": "2026-07-13T10:30:58.822199+00:00",
+      "crisis_classification": "REGULATORY_CRISIS",
+      "disclosure_recommendation": "DISCLOSE_WITHIN_24_HOURS",
+      "evidence_gaps": [
+        "Scope and duration of any actual data transfers to the marketing partner are not yet confirmed.",
+        "The exact contractual termination and suspension rights under the agreement are not fully established from the summary provided."
+      ],
+      "evidence_quality": "MEDIUM",
+      "follow_up_evidence_needed": [
+        "Confirm whether customer health data was actually shared, in what volume, and under what disclosure language.",
+        "Review the contract for any immediate suspension, breach, or remedy provisions before implementing the pause."
+      ],
+      "harm_severity": "HIGH",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "HIGH",
+      "recommended_next_action": "Suspend the data-sharing practice immediately, preserve records, and submit a prompt compliance response to the regulator.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "HIGH",
+      "reputation_risk": "HIGH",
+      "response_proportionality": "IMMEDIATE_INTERVENTION",
+      "short_reason": "This is primarily a regulatory crisis with potential privacy harm affecting a large customer group, so immediate containment is warranted. The regulator’s formal inquiry and official correspondence create meaningful exposure, and continuing the practice could worsen both enforcement and reputational outcomes. Because there is a contractual notice clause, suspension should be handled through legal/compliance channels, but the risk of inaction is higher.",
+      "urgency_level": "HIGH",
+      "user_impact": "MATERIAL",
+      "verdict_id": 0,
+      "verdict_label": "IMMEDIATE_INTERVENTION",
+      "what_not_to_do": "Do not keep sharing the data while the regulator inquiry is active."
+    }
+  },
+  {
+    "caseId": 16,
+    "owner": "0x189096a1f6d1D5440e6536E87Fc9CDae221d30B6",
+    "title": "Automated trading algorithm executing runaway erroneous trades",
+    "targetTier": "EMERGENCY_SHUTDOWN",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 16,
+      "compensation_review": "OPEN_AFTER_EXPOSURE_CONFIRMATION",
+      "confidence_score": 94,
+      "created_at": "2026-07-13T10:35:58.458490+00:00",
+      "crisis_classification": "ACTIVE_USER_HARM_EVENT",
+      "disclosure_recommendation": "DISCLOSE_WITHIN_2_HOURS",
+      "evidence_gaps": [
+        "Exact scope of affected strategies and whether any backup automation remains active."
+      ],
+      "evidence_quality": "MEDIUM_HIGH",
+      "follow_up_evidence_needed": [
+        "Post-shutdown confirmation that all automated order flow has ceased",
+        "Clearing and execution records to quantify total loss and affected accounts",
+        "Root-cause indicators identifying the malfunctioning strategy component"
+      ],
+      "harm_severity": "CRITICAL",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "HIGH",
+      "recommended_next_action": "Immediately activate the full kill-switch across all automated trading accounts, then confirm trade cessation and reconcile losses.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "HIGH",
+      "reputation_risk": "HIGH",
+      "response_proportionality": "EMERGENCY_SHUTDOWN",
+      "short_reason": "The incident is actively causing ongoing financial harm, with real-time logs confirming the erroneous trading pattern and mounting realized losses. Because losses are accruing every second, the safest and most proportionate response is immediate full shutdown rather than targeted remediation that could fail to stop the trading.",
+      "urgency_level": "CRITICAL",
+      "user_impact": "CRITICAL",
+      "verdict_id": 0,
+      "verdict_label": "IMMEDIATE_INTERVENTION",
+      "what_not_to_do": "Do not attempt a narrow fix or wait for diagnosis while the system keeps trading."
+    }
+  },
+  {
+    "caseId": 17,
+    "owner": "0xCb8749Ec93EFeeD3d65785Bd252B394548bD35Cc",
+    "title": "Reactor cooling system exhibiting anomalous pressure readings",
+    "targetTier": "EMERGENCY_SHUTDOWN",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 17,
+      "compensation_review": "OPEN_AFTER_EXPOSURE_CONFIRMATION",
+      "confidence_score": 90,
+      "created_at": "2026-07-13T10:40:57.455922+00:00",
+      "crisis_classification": "ACTIVE_USER_HARM_EVENT",
+      "disclosure_recommendation": "DISCLOSE_WITHIN_2_HOURS",
+      "evidence_gaps": [
+        "Root cause of anomalous pressure readings not yet identified; need immediate engineering investigation to determine if shutdown resolves underlying issue."
+      ],
+      "evidence_quality": "MEDIUM",
+      "follow_up_evidence_needed": [
+        "Root cause analysis of the pressure anomaly",
+        "Post-shutdown cooling system integrity assessment",
+        "Impact assessment on regional power supply"
+      ],
+      "harm_severity": "HIGH",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "HIGH",
+      "recommended_next_action": "Immediately initiate the emergency shutdown procedure for the affected cooling system per established safety protocol.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "MEDIUM",
+      "reputation_risk": "HIGH",
+      "response_proportionality": "IMMEDIATE_INTERVENTION",
+      "short_reason": "Real-time redundant sensors confirm rapidly escalating anomalous pressure in the cooling system, indicating imminent risk of equipment failure that could lead to serious safety consequences for staff and the surrounding community. The established emergency shutdown protocol is the proven response designed exactly for this scenario, and any delay increases the likelihood of harm. The Wikipedia source on nuclear safety underscores the importance of immediate action to prevent accidents, supporting the need for an emergency shutdown.",
+      "urgency_level": "CRITICAL",
+      "user_impact": "SEVERE",
+      "verdict_id": 0,
+      "verdict_label": "IMMEDIATE_INTERVENTION",
+      "what_not_to_do": "Do not delay the emergency shutdown to attempt partial mitigation, as this risks catastrophic equipment failure and potential radiological release."
+    }
+  },
+  {
+    "caseId": 18,
+    "owner": "0xCa360741DC1AdB32BAeB1d338730098c6EDd2a54",
+    "title": "Fleet-wide critical mechanical defect discovered in aircraft component",
+    "targetTier": "EMERGENCY_SHUTDOWN",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 18,
+      "compensation_review": "OPEN_AFTER_EXPOSURE_CONFIRMATION",
+      "confidence_score": 94,
+      "created_at": "2026-07-13T10:45:56.607469+00:00",
+      "crisis_classification": "ACTIVE_USER_HARM_EVENT",
+      "disclosure_recommendation": "DISCLOSE_WITHIN_2_HOURS",
+      "evidence_gaps": [
+        "Fleet-specific mapping of every aircraft and spare unit containing the affected component.",
+        "Verified inspection/remediation procedure and turnaround time to return aircraft safely to service.",
+        "Regulatory directive status and direct coordination record with the relevant aviation authority.",
+        "Immediate exposure assessment for any aircraft already airborne or scheduled to depart imminently."
+      ],
+      "evidence_quality": "HIGH",
+      "follow_up_evidence_needed": [
+        "Manufacturer technical bulletin or mandatory service instruction detailing failure modes and affected serial ranges.",
+        "Approved regulator or manufacturer inspection criteria demonstrating whether the defect can be reliably detected pre-flight.",
+        "Real-time fleet status report showing affected tails, current flight positions, and maintenance availability.",
+        "Internal incident command log documenting grounding execution, passenger communications, and regulator notifications."
+      ],
+      "harm_severity": "CRITICAL",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "CRITICAL",
+      "recommended_next_action": "Issue an immediate ground stop for all affected aircraft and launch regulator-coordinated inspection and remediation before any further departures.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "CRITICAL",
+      "reputation_risk": "CRITICAL",
+      "response_proportionality": "EMERGENCY_SHUTDOWN",
+      "short_reason": "The defect is confirmed by the manufacturer as capable of causing in-flight failure, making this an immediate life-safety threat to passengers and crew. Live source context on airworthiness directives corroborates that known safety deficiencies require mandatory corrective action before aircraft are considered airworthy. Given the severity, fleet-wide exposure, and immediate deadline, grounding the affected fleet is the most defensible action despite severe disruption.",
+      "urgency_level": "CRITICAL",
+      "user_impact": "CRITICAL",
+      "verdict_id": 0,
+      "verdict_label": "IMMEDIATE_INTERVENTION",
+      "what_not_to_do": "Do not continue operating any aircraft with the confirmed defective component while relying on schedule pressure or unvalidated spot checks."
+    }
+  },
+  {
+    "caseId": 19,
+    "owner": "0x32f387e030467fdf0d7b197a7d0E3679351AA932",
+    "title": "Containment breach with imminent toxic gas release risk",
+    "targetTier": "EMERGENCY_SHUTDOWN",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 19,
+      "compensation_review": "OPEN_AFTER_EXPOSURE_CONFIRMATION",
+      "confidence_score": 88,
+      "created_at": "2026-07-13T10:50:48.580358+00:00",
+      "crisis_classification": "ACTIVE_USER_HARM_EVENT",
+      "disclosure_recommendation": "DISCLOSE_WITHIN_2_HOURS",
+      "evidence_gaps": "The submitted evidence URL resolves to a generic Wikipedia article on chemical plants rather than the actual containment vessel structural assessment, meaning the primary technical evidence cannot be independently corroborated from the provided source; the specific failure timeline, gas type, dispersion radius, and engineering sign-off credentials have not been verified through the live source.",
+      "evidence_quality": "MEDIUM",
+      "follow_up_evidence_needed": [
+        "Formal signed engineering assessment report confirming structural failure timeline and failure mode",
+        "Identification of the specific toxic gas involved and its dispersion modelling under current atmospheric conditions",
+        "Confirmed evacuation completion status and headcount of all personnel",
+        "Emergency services incident log and response timeline",
+        "Regulatory notification records confirming compliance with mandatory reporting obligations"
+      ],
+      "harm_severity": "CRITICAL",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "CRITICAL",
+      "recommended_next_action": "Immediately execute full plant evacuation, initiate emergency shutdown of the affected process, and simultaneously notify emergency services and residents within the risk radius.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "HIGH",
+      "reputation_risk": "HIGH",
+      "response_proportionality": "EMERGENCY_SHUTDOWN",
+      "short_reason": "A certified plant engineering team has assessed imminent structural failure of a containment vessel with toxic gas release risk, representing a credible and time-critical threat to worker and community safety. Although the submitted evidence URL does not corroborate the specific assessment, the first-hand nature of the engineering report and the irreversible consequences of inaction make immediate evacuation and shutdown the only defensible response. Attempting stabilization before evacuation introduces unacceptable risk of trapping personnel on site during a potential catastrophic breach.",
+      "urgency_level": "CRITICAL",
+      "user_impact": "CRITICAL",
+      "verdict_id": 0,
+      "verdict_label": "IMMEDIATE_INTERVENTION",
+      "what_not_to_do": "Do not delay evacuation by attempting vessel stabilization, as any failed stabilization attempt could result in a catastrophic toxic release with workers still on site."
+    }
+  }
+]
