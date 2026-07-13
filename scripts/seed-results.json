@@ -1,0 +1,998 @@
+[
+  {
+    "title": "Customer database exposed via misconfigured backup",
+    "error": "An unknown RPC error occurred.\n\nDetails: Rate limit exceeded: 30 requests per minute\nVersion: viem@2.53.1"
+  },
+  {
+    "title": "Core checkout service down across all regions",
+    "error": "An unknown RPC error occurred.\n\nDetails: Rate limit exceeded: 30 requests per minute\nVersion: viem@2.53.1"
+  },
+  {
+    "title": "Guest reports serious injury at theme attraction",
+    "error": "An unknown RPC error occurred.\n\nDetails: Rate limit exceeded: 30 requests per minute\nVersion: viem@2.53.1"
+  },
+  {
+    "title": "Executive email leaked with disparaging customer remarks",
+    "error": "An unknown RPC error occurred.\n\nDetails: Rate limit exceeded: 30 requests per minute\nVersion: viem@2.53.1"
+  },
+  {
+    "title": "Coordinated account takeover ring drains user wallets",
+    "error": "An unknown RPC error occurred.\n\nDetails: Rate limit exceeded: 30 requests per minute\nVersion: viem@2.53.1"
+  },
+  {
+    "title": "Ransomware encrypts internal file servers",
+    "error": "An unknown RPC error occurred.\n\nDetails: Rate limit exceeded: 30 requests per minute\nVersion: viem@2.53.1"
+  },
+  {
+    "title": "Regulator flags undisclosed data-sharing practice",
+    "error": "An unknown RPC error occurred.\n\nDetails: Rate limit exceeded: 30 requests per minute\nVersion: viem@2.53.1"
+  },
+  {
+    "title": "Key contract manufacturer halts production without notice",
+    "error": "An unknown RPC error occurred.\n\nDetails: Rate limit exceeded: 30 requests per minute\nVersion: viem@2.53.1"
+  },
+  {
+    "title": "Warehouse worker seriously injured by forklift",
+    "error": "An unknown RPC error occurred.\n\nDetails: Rate limit exceeded: 30 requests per minute\nVersion: viem@2.53.1"
+  },
+  {
+    "title": "Contamination detected in packaged salad product line",
+    "error": "An unknown RPC error occurred.\n\nDetails: Rate limit exceeded: 30 requests per minute\nVersion: viem@2.53.1"
+  },
+  {
+    "title": "Payment processor outage blocks subscription renewals",
+    "error": "An unknown RPC error occurred.\n\nDetails: Rate limit exceeded: 30 requests per minute\nVersion: viem@2.53.1"
+  },
+  {
+    "title": "Location tracking data shared with advertiser beyond consent scope",
+    "error": "An unknown RPC error occurred.\n\nDetails: Rate limit exceeded: 30 requests per minute\nVersion: viem@2.53.1"
+  },
+  {
+    "title": "Coordinated bot network floods platform with spam listings",
+    "error": "An unknown RPC error occurred.\n\nDetails: Rate limit exceeded: 30 requests per minute\nVersion: viem@2.53.1"
+  },
+  {
+    "title": "Regional data center loses primary and backup power",
+    "error": "An unknown RPC error occurred.\n\nDetails: Rate limit exceeded: 30 requests per minute\nVersion: viem@2.53.1"
+  },
+  {
+    "title": "Background-check vendor breach exposes applicant records",
+    "error": "An unknown RPC error occurred.\n\nDetails: Rate limit exceeded: 30 requests per minute\nVersion: viem@2.53.1"
+  },
+  {
+    "title": "Viral post falsely claims product causes serious harm",
+    "error": "An unknown RPC error occurred.\n\nDetails: Rate limit exceeded: 30 requests per minute\nVersion: viem@2.53.1"
+  },
+  {
+    "title": "Chemical spill at manufacturing plant reaches storm drain",
+    "error": "An unknown RPC error occurred.\n\nDetails: Rate limit exceeded: 30 requests per minute\nVersion: viem@2.53.1"
+  },
+  {
+    "title": "Warehouse staff walk out over safety concerns",
+    "error": "An unknown RPC error occurred.\n\nDetails: Rate limit exceeded: 30 requests per minute\nVersion: viem@2.53.1"
+  },
+  {
+    "title": "Senior executive accused of undisclosed conflict of interest",
+    "error": "An unknown RPC error occurred.\n\nDetails: Rate limit exceeded: 30 requests per minute\nVersion: viem@2.53.1"
+  },
+  {
+    "title": "Loan approval model shown to disadvantage protected group",
+    "error": "An unknown RPC error occurred.\n\nDetails: Rate limit exceeded: 30 requests per minute\nVersion: viem@2.53.1"
+  },
+  {
+    "title": "Nation-state actor suspected in network intrusion",
+    "error": "An unknown RPC error occurred.\n\nDetails: Rate limit exceeded: 30 requests per minute\nVersion: viem@2.53.1"
+  },
+  {
+    "title": "Unauthorized individual gains access to server room",
+    "error": "An unknown RPC error occurred.\n\nDetails: Rate limit exceeded: 30 requests per minute\nVersion: viem@2.53.1"
+  },
+  {
+    "title": "Critical SaaS dependency suffers extended outage",
+    "error": "An unknown RPC error occurred.\n\nDetails: Rate limit exceeded: 30 requests per minute\nVersion: viem@2.53.1"
+  },
+  {
+    "title": "Former employee threatens legal action over wrongful termination",
+    "error": "An unknown RPC error occurred.\n\nDetails: Rate limit exceeded: 30 requests per minute\nVersion: viem@2.53.1"
+  },
+  {
+    "title": "Coastal facility in path of an approaching hurricane",
+    "error": "An unknown RPC error occurred.\n\nDetails: Rate limit exceeded: 30 requests per minute\nVersion: viem@2.53.1"
+  },
+  {
+    "caseId": 3,
+    "title": "Core checkout service down across all regions",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 3,
+      "compensation_review": "OPEN_IMMEDIATELY",
+      "confidence_score": 90,
+      "created_at": "2026-07-13T01:55:56.048931+00:00",
+      "crisis_classification": "ACTIVE_USER_HARM_EVENT",
+      "disclosure_recommendation": "DISCLOSE_WITHIN_2_HOURS",
+      "evidence_gaps": [
+        "No direct evidence of rollback tooling reliability in production",
+        "No confirmation of the exact parameter causing the failure"
+      ],
+      "evidence_quality": "HIGH",
+      "follow_up_evidence_needed": [
+        "Validation of rollback tooling in staging before production use",
+        "Root cause analysis to isolate the faulty parameter for future prevention"
+      ],
+      "harm_severity": "HIGH",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "CRITICAL",
+      "recommended_next_action": "Execute the rollback immediately with a 30-minute success/failure checkpoint.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "MEDIUM",
+      "reputation_risk": "HIGH",
+      "response_proportionality": "IMMEDIATE_INTERVENTION",
+      "short_reason": "The configuration push is directly correlated with a 100% checkout failure rate, causing severe user harm. Rollback is the fastest path to restoration, despite unproven tooling, as the alternative risks prolonged outage.",
+      "urgency_level": "CRITICAL",
+      "user_impact": "SEVERE",
+      "verdict_id": 0,
+      "verdict_label": "IMMEDIATE_INTERVENTION",
+      "what_not_to_do": "Delay mitigation to validate the hotfix."
+    }
+  },
+  {
+    "caseId": 4,
+    "title": "Guest reports serious injury at theme attraction",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 4,
+      "compensation_review": "OPEN_IMMEDIATELY",
+      "confidence_score": 90,
+      "created_at": "2026-07-13T01:57:23.930223+00:00",
+      "crisis_classification": "ACTIVE_USER_HARM_EVENT",
+      "disclosure_recommendation": "DISCLOSE_WITHIN_2_HOURS",
+      "evidence_gaps": [
+        "Manufacturer's technical specifications for the restraint system",
+        "Maintenance history for the other rides in the fleet"
+      ],
+      "evidence_quality": "MEDIUM",
+      "follow_up_evidence_needed": [
+        "Root cause analysis from the hardware manufacturer",
+        "Comprehensive inspection reports for all identical restraint systems"
+      ],
+      "harm_severity": "HIGH",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "HIGH",
+      "recommended_next_action": "Execute a fleet-wide shutdown of all rides using the identical restraint model and initiate an emergency technical audit.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "HIGH",
+      "reputation_risk": "HIGH",
+      "response_proportionality": "IMMEDIATE_INTERVENTION",
+      "short_reason": "A mechanical failure of a safety restraint resulting in physical injury indicates a potential systemic defect. The risk of a second, potentially fatal injury outweighs the short-term revenue loss of a holiday weekend shutdown.",
+      "urgency_level": "CRITICAL",
+      "user_impact": "MATERIAL",
+      "verdict_id": 0,
+      "verdict_label": "IMMEDIATE_INTERVENTION",
+      "what_not_to_do": "Prioritize holiday weekend revenue over the verification of safety-critical restraint hardware."
+    }
+  },
+  {
+    "caseId": 5,
+    "title": "Executive email leaked with disparaging customer remarks",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 5,
+      "compensation_review": "OPEN_AFTER_EXPOSURE_CONFIRMATION",
+      "confidence_score": 89,
+      "created_at": "2026-07-13T01:58:50.051452+00:00",
+      "crisis_classification": "REPUTATIONAL_CRISIS",
+      "disclosure_recommendation": "DISCLOSE_WITHIN_2_HOURS",
+      "evidence_gaps": [
+        "Whether affected delayed passengers received any direct outreach or remediation",
+        "Scope of external media pickup and velocity beyond current social media circulation",
+        "HR and legal posture on disciplinary options involving the executive",
+        "Any prior similar executive communications that could indicate a broader culture issue"
+      ],
+      "evidence_quality": "MEDIUM_HIGH",
+      "follow_up_evidence_needed": [
+        "Media monitoring snapshot showing reach, sentiment, and key outlets amplifying the leak",
+        "Draft statement cleared by legal with approved language boundaries",
+        "HR fact pattern and timeline regarding the executive's role and potential interim measures",
+        "Customer impact assessment for the delayed passengers referenced in the leaked email"
+      ],
+      "harm_severity": "HIGH",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "HIGH",
+      "recommended_next_action": "Issue a legally reviewed holding statement within two hours that apologizes, affirms the message is inconsistent with company values, and confirms an immediate internal review.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "MEDIUM",
+      "reputation_risk": "HIGH",
+      "response_proportionality": "IMMEDIATE_INTERVENTION",
+      "short_reason": "The leaked email appears authentic based on internal mail server verification, making the core factual issue strong enough to warrant immediate action. Harm is primarily reputational rather than direct physical or operational injury, but the customer-facing nature of the remarks and active social backlash create a high-urgency need for a prompt apology and review. The live source URL only provides generic PR background and does not independently corroborate the incident itself, so some external validation gaps remain.",
+      "urgency_level": "HIGH",
+      "user_impact": "MATERIAL",
+      "verdict_id": 0,
+      "verdict_label": "IMMEDIATE_INTERVENTION",
+      "what_not_to_do": "Do not remain silent pending a full internal review while authentic evidence spreads and public anger escalates."
+    }
+  },
+  {
+    "caseId": 6,
+    "title": "Coordinated account takeover ring drains user wallets",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 6,
+      "compensation_review": "OPEN_AFTER_EXPOSURE_CONFIRMATION",
+      "confidence_score": 85,
+      "created_at": "2026-07-13T02:00:22.225881+00:00",
+      "crisis_classification": "ACTIVE_USER_HARM_EVENT",
+      "disclosure_recommendation": "DISCLOSE_WITHIN_2_HOURS",
+      "evidence_gaps": [
+        "Total volume of funds currently at risk in non-flagged accounts",
+        "Identification of the specific data breach source used for the stuffing"
+      ],
+      "evidence_quality": "MEDIUM",
+      "follow_up_evidence_needed": [
+        "Log analysis for successful logins from unusual IPs not yet in the 'drain' phase",
+        "Customer support ticket volume regarding legitimate transaction failures"
+      ],
+      "harm_severity": "HIGH",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "HIGH",
+      "recommended_next_action": "Execute the platform-wide freeze immediately and issue a clear status update to all users explaining the security measure.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "MEDIUM",
+      "reputation_risk": "HIGH",
+      "response_proportionality": "IMMEDIATE_INTERVENTION",
+      "short_reason": "The speed and automated nature of the draining require a platform-wide halt to prevent total loss of user trust and capital. While targeted containment is ideal, the risk of the attack expanding beyond current detection fingerprints is too high to justify a partial response.",
+      "urgency_level": "CRITICAL",
+      "user_impact": "MATERIAL",
+      "verdict_id": 0,
+      "verdict_label": "IMMEDIATE_INTERVENTION",
+      "what_not_to_do": "Do not delay action to wait for a 100% accurate list of compromised accounts while funds continue to be drained."
+    }
+  },
+  {
+    "caseId": 7,
+    "title": "Ransomware encrypts internal file servers",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 7,
+      "compensation_review": "OPEN_AFTER_EXPOSURE_CONFIRMATION",
+      "confidence_score": 88,
+      "created_at": "2026-07-13T02:02:38.715636+00:00",
+      "crisis_classification": "ACTIVE_USER_HARM_EVENT",
+      "disclosure_recommendation": "DISCLOSE_WITHIN_2_HOURS",
+      "evidence_gaps": [
+        "Whether patient records were exfiltrated before encryption remains unconfirmed."
+      ],
+      "evidence_quality": "MEDIUM",
+      "follow_up_evidence_needed": [
+        "Confirm backup integrity and restore point age.",
+        "Determine whether any patient data was exfiltrated before encryption."
+      ],
+      "harm_severity": "HIGH",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "HIGH",
+      "recommended_next_action": "Immediately isolate the affected servers, preserve logs and images, and restore critical services from known-clean backups while initiating incident response.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "MEDIUM",
+      "reputation_risk": "HIGH",
+      "response_proportionality": "IMMEDIATE_INTERVENTION",
+      "short_reason": "This is an active ransomware incident disrupting scheduling and records access across six clinic locations, creating immediate operational and patient care risk. The submitted evidence credibly confirms encryption and ransom demand, but exfiltration status is still unknown, so containment and recovery take priority over delay. Option 0 is the most proportionate immediate step because it reduces harm and limits spread while preserving the ability to investigate further.",
+      "urgency_level": "CRITICAL",
+      "user_impact": "MATERIAL",
+      "verdict_id": 0,
+      "verdict_label": "IMMEDIATE_INTERVENTION",
+      "what_not_to_do": "Do not delay containment while waiting for perfect forensic clarity or attempt to negotiate before isolating impacted systems."
+    }
+  },
+  {
+    "caseId": 8,
+    "title": "Regulator flags undisclosed data-sharing practice",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 8,
+      "compensation_review": "OPEN_AFTER_EXPOSURE_CONFIRMATION",
+      "confidence_score": 78,
+      "created_at": "2026-07-13T02:05:07.916022+00:00",
+      "crisis_classification": "REGULATORY_CRISIS",
+      "disclosure_recommendation": "DISCLOSE_WITHIN_24_HOURS",
+      "evidence_gaps": [
+        "The data-sharing agreement itself has not been submitted as evidence, only referenced, so the exact disclosure language and force majeure provisions remain unconfirmed",
+        "It is unclear whether the marketing partner contract contains any regulatory compliance carve-out that would permit immediate suspension without triggering the 30-day termination penalty",
+        "The scope of actual data transferred has not been quantified beyond the 90,000 policyholder estimate, leaving harm depth unconfirmed",
+        "No internal audit or data flow map has been submitted to confirm whether disclosure notices to policyholders existed at any point"
+      ],
+      "evidence_quality": "MEDIUM",
+      "follow_up_evidence_needed": [
+        "Full copy of the data-sharing agreement including termination clauses and any regulatory compliance carve-outs",
+        "Internal data flow audit confirming exactly what health data fields were transmitted and to whom",
+        "Copies of policyholder consent forms, privacy notices, and terms of service in effect at the time of sharing",
+        "Legal opinion on whether the regulatory inquiry constitutes sufficient grounds to invoke force majeure or regulatory compliance suspension rights under the marketing partner contract",
+        "Prior communications between compliance team and marketing partner regarding data use limitations"
+      ],
+      "harm_severity": "HIGH",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "HIGH",
+      "recommended_next_action": "Immediately suspend the data-sharing arrangement, notify the marketing partner in writing of the suspension citing regulatory inquiry as grounds, and submit a proactive good-faith response to the regulator within the 5-day deadline.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "HIGH",
+      "reputation_risk": "HIGH",
+      "response_proportionality": "IMMEDIATE_INTERVENTION",
+      "short_reason": "A formal regulatory inquiry involving potential undisclosed health data sharing affecting 90,000 policyholders constitutes a high-severity regulatory and reputational crisis requiring immediate action. Continuing the arrangement while conducting a passive legal review risks being interpreted by the regulator as willful non-compliance, substantially increasing penalty exposure. The contractual termination risk is a manageable secondary concern that is outweighed by the regulatory and reputational consequences of inaction. Note: the submitted evidence URL resolves to the EU Data Protection Directive Wikipedia article, which is a general reference document and does not corroborate the specific US state regulatory disclosure requirements at issue here, representing a meaningful evidentiary gap.",
+      "urgency_level": "HIGH",
+      "user_impact": "MATERIAL",
+      "verdict_id": 0,
+      "verdict_label": "IMMEDIATE_INTERVENTION",
+      "what_not_to_do": "Do not continue the data-sharing arrangement during the legal review period, as regulators are likely to treat ongoing sharing as a deliberate aggravating factor that significantly increases penalty exposure."
+    }
+  },
+  {
+    "caseId": 9,
+    "title": "Key contract manufacturer halts production without notice",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 9,
+      "compensation_review": "OPEN_AFTER_EXPOSURE_CONFIRMATION",
+      "confidence_score": 90,
+      "created_at": "2026-07-13T02:06:49.303662+00:00",
+      "crisis_classification": "OPERATIONAL_CRISIS",
+      "disclosure_recommendation": "DISCLOSE_WITHIN_24_HOURS",
+      "evidence_gaps": [
+        "Exact current inventory runway in days",
+        "Contractual penalties for delivery delays to retail partners"
+      ],
+      "evidence_quality": "MEDIUM",
+      "follow_up_evidence_needed": [
+        "Detailed inventory depletion forecast",
+        "Legal review of force majeure clauses in the primary manufacturer contract"
+      ],
+      "harm_severity": "HIGH",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "HIGH",
+      "recommended_next_action": "Issue a formal activation notice to the secondary manufacturer to begin the 6-week ramp-up immediately.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "MEDIUM",
+      "reputation_risk": "HIGH",
+      "response_proportionality": "IMMEDIATE_INTERVENTION",
+      "short_reason": "The lack of a restart date combined with a 6-week backup ramp-up time creates a critical window of vulnerability. Relying solely on negotiations is too risky given the high impact on flagship product availability and retail relationships.",
+      "urgency_level": "HIGH",
+      "user_impact": "MATERIAL",
+      "verdict_id": 0,
+      "verdict_label": "IMMEDIATE_INTERVENTION",
+      "what_not_to_do": "Do not wait for a confirmed restart date from the primary manufacturer before initiating the backup ramp-up."
+    }
+  },
+  {
+    "caseId": 10,
+    "title": "Warehouse worker seriously injured by forklift",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 10,
+      "compensation_review": "OPEN_IMMEDIATELY",
+      "confidence_score": 85,
+      "created_at": "2026-07-13T02:08:52.432635+00:00",
+      "crisis_classification": "ACTIVE_USER_HARM_EVENT",
+      "disclosure_recommendation": "DISCLOSE_WITHIN_2_HOURS",
+      "evidence_gaps": "The submitted evidence URL resolves to a general Wikipedia article on occupational safety and health rather than the actual shift supervisor incident report or camera footage log, meaning the primary evidentiary documents have not been independently verified through the submitted source; the specific pedestrian barrier configuration at the time of the incident has not been confirmed; and the injured associate's medical assessment and prognosis are not yet on record.",
+      "evidence_quality": "MEDIUM",
+      "follow_up_evidence_needed": [
+        "Authenticated copy of the shift supervisor incident report with timestamp and supervisor signature",
+        "Warehouse camera footage confirming the sequence of events and barrier status at the time of impact",
+        "Medical evaluation and injury classification for the affected associate",
+        "OSHA incident classification determination confirming whether this is a recordable or reportable event under 29 CFR 1904",
+        "Engineering or safety officer assessment of pedestrian barrier compliance across the full warehouse floor, not just the affected zone",
+        "Chain-of-custody documentation for all preserved evidence to support potential regulatory or legal proceedings"
+      ],
+      "harm_severity": "HIGH",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "HIGH",
+      "recommended_next_action": "Immediately suspend all forklift traffic in the affected zone, preserve camera footage as evidentiary record, notify OSHA within the required reporting window, and initiate a formal safety audit before any resumption of operations.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "HIGH",
+      "reputation_risk": "HIGH",
+      "response_proportionality": "IMMEDIATE_INTERVENTION",
+      "short_reason": "A warehouse associate has suffered a confirmed physical injury from a forklift in a pedestrian aisle, constituting an active harm event with probable OSHA recordable and potentially reportable obligations. The evidence base, while credible in description, could not be independently corroborated via the submitted URL, which links to a generic Wikipedia article rather than the actual incident documentation, reducing evidence quality to MEDIUM. Suspending forklift operations in the affected zone is the only proportionate response given the severity of harm, the unresolved root cause, and the significant regulatory and reputational consequences of a second incident.",
+      "urgency_level": "HIGH",
+      "user_impact": "MATERIAL",
+      "verdict_id": 0,
+      "verdict_label": "IMMEDIATE_INTERVENTION",
+      "what_not_to_do": "Do not continue forklift operations in the affected zone under a partial mitigation posture before the root cause is confirmed, as a second incident would constitute gross negligence and dramatically escalate regulatory and legal exposure."
+    }
+  },
+  {
+    "caseId": 11,
+    "title": "Contamination detected in packaged salad product line",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 11,
+      "compensation_review": "OPEN_AFTER_EXPOSURE_CONFIRMATION",
+      "confidence_score": 85,
+      "created_at": "2026-07-13T02:10:42.353264+00:00",
+      "crisis_classification": "ACTIVE_USER_HARM_EVENT",
+      "disclosure_recommendation": "DISCLOSE_WITHIN_2_HOURS",
+      "evidence_gaps": [
+        "Full distribution chain mapping not yet completed"
+      ],
+      "evidence_quality": "MEDIUM",
+      "follow_up_evidence_needed": [
+        "Complete product distribution chain data"
+      ],
+      "harm_severity": "HIGH",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "HIGH",
+      "recommended_next_action": "Initiate recall of confirmed contaminated batch codes while accelerating traceability efforts.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "MEDIUM",
+      "reputation_risk": "HIGH",
+      "response_proportionality": "IMMEDIATE_INTERVENTION",
+      "short_reason": "Listeria contamination poses high harm risk with credible lab evidence. Immediate recall of affected batches is proportional and limits user exposure without overextending operational capacity. Disclosure within two hours aligns with regulatory and reputational best practices.",
+      "urgency_level": "HIGH",
+      "user_impact": "MATERIAL",
+      "verdict_id": 0,
+      "verdict_label": "IMMEDIATE_INTERVENTION",
+      "what_not_to_do": "Do not delay recall pending full traceability as exposure risk outweighs logistical gaps."
+    }
+  },
+  {
+    "caseId": 12,
+    "title": "Payment processor outage blocks subscription renewals",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 12,
+      "compensation_review": "OPEN_AFTER_EXPOSURE_CONFIRMATION",
+      "confidence_score": 82,
+      "created_at": "2026-07-13T02:12:17.180449+00:00",
+      "crisis_classification": "ACTIVE_USER_HARM_EVENT",
+      "disclosure_recommendation": "DISCLOSE_WITHIN_2_HOURS",
+      "evidence_gaps": "The live-fetched URL resolves to a generic Wikipedia article on payment processors rather than an actual processor status page or incident report, meaning the submitted evidence does not directly corroborate the specific outage window, its duration, or its cause — this is a material evidentiary discrepancy that reduces confidence in the precise scope of impact.",
+      "evidence_quality": "MEDIUM",
+      "follow_up_evidence_needed": [
+        "Official incident report or post-mortem from the third-party payment processor confirming outage start and end times",
+        "Internal billing logs showing the exact count and account IDs of failed renewal charges within the outage window",
+        "Legal review of applicable consumer protection and subscription billing regulations in key jurisdictions to assess regulatory notification obligations",
+        "Confirmation of backup processor capacity and fraud rule compatibility before option_1 is considered as a parallel or fallback measure"
+      ],
+      "harm_severity": "HIGH",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "HIGH",
+      "recommended_next_action": "Immediately suspend automated access revocation for all subscribers with renewal failures timestamped within the confirmed outage window, communicate proactively to affected users, and begin logging all impacted accounts for a coordinated retry cycle once the processor recovers.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "MEDIUM",
+      "reputation_risk": "HIGH",
+      "response_proportionality": "IMMEDIATE_INTERVENTION",
+      "short_reason": "Approximately 300,000 subscribers face unjustified service suspension due to a confirmed third-party processor outage lasting 18 hours, constituting active user harm through no fault of the customers. Suspending access revocation is fully reversible, proportionate, and protects Orbital Streaming from disproportionate reputational and potential regulatory exposure under consumer protection frameworks. However, the evidence URL submitted points to a generic Wikipedia page rather than a live processor status dashboard, which introduces a moderate evidentiary gap that should be closed immediately by obtaining a verified incident report from the processor.",
+      "urgency_level": "HIGH",
+      "user_impact": "MATERIAL",
+      "verdict_id": 0,
+      "verdict_label": "IMMEDIATE_INTERVENTION",
+      "what_not_to_do": "Do not allow automated access revocation to continue running during a confirmed vendor-caused outage, as mass unjustified suspensions of 300,000 subscribers will trigger severe reputational and regulatory backlash that far outweighs any short-term revenue protection benefit."
+    }
+  },
+  {
+    "caseId": 13,
+    "title": "Location tracking data shared with advertiser beyond consent scope",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 13,
+      "compensation_review": "OPEN_AFTER_EXPOSURE_CONFIRMATION",
+      "confidence_score": 90,
+      "created_at": "2026-07-13T02:13:51.162289+00:00",
+      "crisis_classification": "ACTIVE_USER_HARM_EVENT",
+      "disclosure_recommendation": "DISCLOSE_WITHIN_2_HOURS",
+      "evidence_gaps": [
+        "Exact duration and volume of over-sharing are not yet quantified.",
+        "It is unclear whether the advertising partner retained, profiled, or onward-shared the precise location data.",
+        "Jurisdiction-specific notification and regulator reporting obligations have not been mapped.",
+        "The exact affected user count and geographic distribution need validation from transmission logs."
+      ],
+      "evidence_quality": "MEDIUM_HIGH",
+      "follow_up_evidence_needed": [
+        "Data transmission logs showing start date, end date, frequency, and exact fields shared beyond consent.",
+        "Partner attestations and technical records confirming deletion, retention status, and any onward sharing or model training use.",
+        "A jurisdiction-by-jurisdiction legal assessment of breach notification and regulator reporting triggers.",
+        "A validated user impact analysis matching consent settings to actual exposed records."
+      ],
+      "harm_severity": "HIGH",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "HIGH",
+      "recommended_next_action": "Immediately stop transmission of non-consented precise location fields, preserve logs, and issue a clear notice to affected users while legal and compliance prepare regulator-facing documentation.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "HIGH",
+      "reputation_risk": "HIGH",
+      "response_proportionality": "IMMEDIATE_INTERVENTION",
+      "short_reason": "A first-hand internal audit directly indicates that precise location data was shared beyond the consented scope, affecting an estimated 500,000 users. Because the violation concerns sensitive location data and appears ongoing or recently ongoing, the most defensible response is immediate technical containment plus prompt user disclosure rather than delaying notice for revenue or legal convenience.",
+      "urgency_level": "HIGH",
+      "user_impact": "MATERIAL",
+      "verdict_id": 0,
+      "verdict_label": "IMMEDIATE_INTERVENTION",
+      "what_not_to_do": "Do not delay notification solely to protect advertising revenue or avoid partner friction while excess location sharing may already be a confirmed consent breach."
+    }
+  },
+  {
+    "caseId": 14,
+    "title": "Coordinated bot network floods platform with spam listings",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 14,
+      "compensation_review": "OPEN_AFTER_EXPOSURE_CONFIRMATION",
+      "confidence_score": 88,
+      "created_at": "2026-07-13T02:15:25.612339+00:00",
+      "crisis_classification": "ACTIVE_USER_HARM_EVENT",
+      "disclosure_recommendation": "DISCLOSE_WITHIN_2_HOURS",
+      "evidence_gaps": [
+        "False-positive rate among flagged power sellers is not yet validated at scale.",
+        "No quantified estimate of scam transaction volume or buyer loss exposure."
+      ],
+      "evidence_quality": "MEDIUM",
+      "follow_up_evidence_needed": [
+        "Validate false-positive rate on a larger sample of flagged accounts, especially power sellers.",
+        "Measure ongoing listing velocity and scam transaction volume after containment."
+      ],
+      "harm_severity": "HIGH",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "HIGH",
+      "recommended_next_action": "Mass-suspend flagged accounts, immediately add CAPTCHA to listing creation, and place a rapid human review queue for high-risk legitimate sellers.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "MEDIUM",
+      "reputation_risk": "HIGH",
+      "response_proportionality": "IMMEDIATE_INTERVENTION",
+      "short_reason": "This is an active user-harm event because fraudulent listings are already degrading search quality and some users report scam purchases. The evidence supports a shared automated behavioral signature, and the volume is high enough that immediate containment is more defensible than a softer measure, though some legitimate sellers may be affected.",
+      "urgency_level": "HIGH",
+      "user_impact": "MATERIAL",
+      "verdict_id": 0,
+      "verdict_label": "IMMEDIATE_INTERVENTION",
+      "what_not_to_do": "Do not delay containment while optimizing for perfect precision, because fraudulent listings will keep harming users."
+    }
+  },
+  {
+    "caseId": 15,
+    "title": "Background-check vendor breach exposes applicant records",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 15,
+      "compensation_review": "OPEN_AFTER_EXPOSURE_CONFIRMATION",
+      "confidence_score": 85,
+      "created_at": "2026-07-13T02:17:14.138560+00:00",
+      "crisis_classification": "ACTIVE_USER_HARM_EVENT",
+      "disclosure_recommendation": "DISCLOSE_WITHIN_24_HOURS",
+      "evidence_gaps": "Vendor has not confirmed the exact number of records or individuals affected, the precise data fields exposed per individual, whether encryption or access controls were in place at the time of breach, the attack vector and timeline of the breach, and whether any downstream misuse of the exposed data has already occurred.",
+      "evidence_quality": "MEDIUM",
+      "follow_up_evidence_needed": [
+        "Vendor's confirmed final list of affected individual records and data fields",
+        "Forensic investigation report identifying breach vector, timeline, and duration",
+        "Data processing agreement terms governing vendor liability and indemnification obligations",
+        "Applicable state breach notification deadline inventory for all applicant jurisdictions",
+        "Evidence of any prior or current misuse of exposed data on dark web or fraud reports"
+      ],
+      "harm_severity": "HIGH",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "HIGH",
+      "recommended_next_action": "Immediately issue breach notifications to all 40,000 potentially affected applicants based on the 18-month processing window and offer free credit monitoring, while simultaneously preserving all data processing agreement documentation to support vendor liability claims.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "HIGH",
+      "reputation_risk": "HIGH",
+      "response_proportionality": "IMMEDIATE_INTERVENTION",
+      "short_reason": "The vendor breach disclosure confirms exposure of highly sensitive personal data including SSNs and criminal history records for up to 40,000 job applicants, constituting an active harm event with material identity theft risk. Most U.S. state breach notification laws impose strict timelines often 30 to 60 days from discovery and waiting for vendor scope confirmation risks non-compliance and compounding reputational damage. The incomplete scope confirmation is a known gap but does not justify inaction given the severity of data types involved and the size of the affected population. Note: the submitted evidence URL resolves to a general Wikipedia article on data breaches rather than the actual vendor disclosure notice, which limits independent corroboration of the specific breach details and slightly reduces evidence quality.",
+      "urgency_level": "HIGH",
+      "user_impact": "MATERIAL",
+      "verdict_id": 0,
+      "verdict_label": "IMMEDIATE_INTERVENTION",
+      "what_not_to_do": "Do not delay applicant notification while waiting for the vendor to confirm the exact breach scope, as statutory notification deadlines under laws such as state breach notification statutes and FCRA obligations will not pause for vendor confirmation timelines."
+    }
+  },
+  {
+    "caseId": 16,
+    "title": "Viral post falsely claims product causes serious harm",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 16,
+      "compensation_review": "OPEN_AFTER_EXPOSURE_CONFIRMATION",
+      "confidence_score": 78,
+      "created_at": "2026-07-13T02:19:00.127658+00:00",
+      "crisis_classification": "REPUTATIONAL_CRISIS",
+      "disclosure_recommendation": "DISCLOSE_WITHIN_2_HOURS",
+      "evidence_gaps": "The submitted evidence URL resolves to a generic Wikipedia article on misinformation rather than the actual third-party lab report, meaning the lab results themselves have not been independently verified through the provided link; the fabricated lab attachment referenced in the viral post has not been submitted for forensic comparison; and there is no current reach or velocity data for the viral post to calibrate response urgency precisely.",
+      "evidence_quality": "MEDIUM",
+      "follow_up_evidence_needed": [
+        "Direct URL or certified copy of the actual third-party cosmetics safety lab report with accreditation credentials visible",
+        "Forensic analysis of the fabricated lab attachment to support platform takedown and potential legal action",
+        "Real-time reach and engagement metrics for the viral post across all platforms to assess spread velocity",
+        "Customer complaint or adverse event logs to confirm no actual product-related harm incidents exist",
+        "Legal counsel assessment of defamation or trade libel exposure and viability of injunctive relief"
+      ],
+      "harm_severity": "HIGH",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "HIGH",
+      "recommended_next_action": "Immediately publish the accredited third-party lab results across all owned channels with a clear, factual rebuttal narrative, while simultaneously filing platform takedown requests and alerting legal counsel to preserve options for defamation action.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "MEDIUM",
+      "reputation_risk": "HIGH",
+      "response_proportionality": "IMMEDIATE_INTERVENTION",
+      "short_reason": "A fabricated lab result falsely alleging severe chemical burns poses immediate and material reputational and commercial harm to Nordlight Skincare, with documented sales impact already underway. The accredited third-party safety results are the strongest available counter-evidence and must be deployed publicly without delay, as the 8-hour decision window does not permit passive monitoring. A critical discrepancy exists in the submitted evidence: the URL provided for the lab results resolves to a Wikipedia page on misinformation, not the actual lab document, which reduces evidence quality confidence and must be resolved before or alongside public disclosure.",
+      "urgency_level": "HIGH",
+      "user_impact": "MATERIAL",
+      "verdict_id": 0,
+      "verdict_label": "IMMEDIATE_INTERVENTION",
+      "what_not_to_do": "Do not remain silent or delay public response in hopes the post fades organically, as unchecked viral misinformation about product safety will compound reputational and sales damage beyond recovery thresholds."
+    }
+  },
+  {
+    "caseId": 17,
+    "title": "Warehouse staff walk out over safety concerns",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 17,
+      "compensation_review": "UNDER_REVIEW",
+      "confidence_score": 85,
+      "created_at": "2026-07-13T02:20:40.580317+00:00",
+      "crisis_classification": "OPERATIONAL_CRISIS",
+      "disclosure_recommendation": "DISCLOSE_WITHIN_2_HOURS",
+      "evidence_gaps": [
+        "Specific details of the prior injury incident that triggered the current walkout."
+      ],
+      "evidence_quality": "MEDIUM",
+      "follow_up_evidence_needed": [
+        "OSHA compliance records for the facility",
+        "Internal accident reports from the prior injury incident"
+      ],
+      "harm_severity": "HIGH",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "HIGH",
+      "recommended_next_action": "Initiate the meeting with worker representatives immediately to formalize the safety audit timeline and prevent the dispute from spreading to the morning shift.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "MEDIUM",
+      "reputation_risk": "HIGH",
+      "response_proportionality": "IMMEDIATE_INTERVENTION",
+      "short_reason": "The walkout of 60% of the second shift poses a critical threat to operational continuity and safety reputation. Prioritizing negotiation via a safety audit addresses the root cause and prevents labor escalation, whereas hiring temps would likely trigger a full-scale strike.",
+      "urgency_level": "HIGH",
+      "user_impact": "MATERIAL",
+      "verdict_id": 0,
+      "verdict_label": "IMMEDIATE_INTERVENTION",
+      "what_not_to_do": "Do not attempt to replace the walking-out staff with temporary labor immediately, as this will likely be viewed as strikebreaking and incite a wider walkout across other shifts."
+    }
+  },
+  {
+    "caseId": 18,
+    "title": "Senior executive accused of undisclosed conflict of interest",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 18,
+      "compensation_review": "OPEN_AFTER_EXPOSURE_CONFIRMATION",
+      "confidence_score": 85,
+      "created_at": "2026-07-13T02:22:54.826394+00:00",
+      "crisis_classification": "GOVERNANCE_CRISIS",
+      "disclosure_recommendation": "DISCLOSE_WITHIN_24_HOURS",
+      "evidence_gaps": [
+        "Lack of corroboration for the whistleblower's claims beyond the initial submission",
+        "No direct evidence of the executive's financial stake in the vendor"
+      ],
+      "evidence_quality": "MEDIUM",
+      "follow_up_evidence_needed": [
+        "Financial records linking the executive to the vendor",
+        "Testimony or documentation from other employees or vendors involved in the contracts"
+      ],
+      "harm_severity": "HIGH",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "HIGH",
+      "recommended_next_action": "Initiate an independent investigation and place the executive on administrative leave immediately.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "MEDIUM",
+      "reputation_risk": "HIGH",
+      "response_proportionality": "IMMEDIATE_INTERVENTION",
+      "short_reason": "The allegations involve a potential fiduciary breach with high reputational and operational risks. While the evidence is currently uncorroborated, the severity of the potential harm and the need to preserve investigation integrity justify immediate action. The Wikipedia source confirms the definition of conflict of interest but does not corroborate the specific claims.",
+      "urgency_level": "HIGH",
+      "user_impact": "MATERIAL",
+      "verdict_id": 0,
+      "verdict_label": "IMMEDIATE_INTERVENTION",
+      "what_not_to_do": "Allow the executive to remain in a position of influence during the investigation."
+    }
+  },
+  {
+    "caseId": 19,
+    "title": "Loan approval model shown to disadvantage protected group",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 19,
+      "compensation_review": "OPEN_AFTER_EXPOSURE_CONFIRMATION",
+      "confidence_score": 88,
+      "created_at": "2026-07-13T02:24:08.768993+00:00",
+      "crisis_classification": "ACTIVE_USER_HARM_EVENT",
+      "disclosure_recommendation": "DISCLOSE_WITHIN_24_HOURS",
+      "evidence_gaps": [
+        "Exact magnitude and duration of adverse impact across affected applicants",
+        "Case-level review of wrongly denied or disadvantaged applicants",
+        "Validation of whether manual underwriting capacity can meet legal and service deadlines",
+        "Independent replication of the fairness findings using production decision logs"
+      ],
+      "evidence_quality": "MEDIUM",
+      "follow_up_evidence_needed": [
+        "Production-level adverse impact analysis by protected class and time period",
+        "Applicant-level remediation review for denials and pricing outcomes",
+        "Legal assessment against applicable fair lending and discrimination standards",
+        "Operational plan for manual underwriting backlog, prioritization, and SLA compliance",
+        "Independent model validation and root-cause analysis of biased features or training data"
+      ],
+      "harm_severity": "HIGH",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "HIGH",
+      "recommended_next_action": "Immediately suspend automated approvals, shift to controlled manual underwriting, and launch expedited remediation and impact assessment.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "HIGH",
+      "reputation_risk": "HIGH",
+      "response_proportionality": "IMMEDIATE_INTERVENTION",
+      "short_reason": "The internal fairness audit indicates a materially lower approval rate for a protected group even after controlling for creditworthiness, which points to active user harm and significant fair lending exposure. Because the evidence is internally generated and the cited live source is only general background rather than case-specific corroboration, evidence quality is medium rather than high. The most defensible action is to stop the likely discriminatory mechanism now and manage throughput risk through manual controls while remediation proceeds.",
+      "urgency_level": "HIGH",
+      "user_impact": "MATERIAL",
+      "verdict_id": 0,
+      "verdict_label": "IMMEDIATE_INTERVENTION",
+      "what_not_to_do": "Do not keep the model in production while relying on an unvalidated interim adjustment to manage a confirmed disparity."
+    }
+  },
+  {
+    "caseId": 20,
+    "title": "Nation-state actor suspected in network intrusion",
+    "status": "READY_FOR_REVIEW",
+    "verdict": {
+      "error": "no verdict"
+    }
+  },
+  {
+    "caseId": 21,
+    "title": "Unauthorized individual gains access to server room",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 21,
+      "compensation_review": "OPEN_AFTER_EXPOSURE_CONFIRMATION",
+      "confidence_score": 85,
+      "created_at": "2026-07-13T02:28:31.221631+00:00",
+      "crisis_classification": "POTENTIAL_HARM_EVENT",
+      "disclosure_recommendation": "INTERNAL_ONLY",
+      "evidence_gaps": [
+        "Whether any servers, consoles, removable media, or network ports were physically accessed or altered.",
+        "Whether badge log anomalies or tailgating explain how the intruder entered.",
+        "Whether system, authentication, and network logs show concurrent unauthorized access or exfiltration.",
+        "Whether additional camera angles or witness accounts can narrow identification of the intruder."
+      ],
+      "evidence_quality": "MEDIUM",
+      "follow_up_evidence_needed": [
+        "Detailed forensic inspection results for all server room equipment and racks.",
+        "Door access control logs correlated with guard timeline and any alarm events.",
+        "Server, endpoint, authentication, and network monitoring logs from the incident window.",
+        "Any additional CCTV footage, visitor records, or witness statements from nearby areas."
+      ],
+      "harm_severity": "HIGH",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "HIGH",
+      "recommended_next_action": "Immediately secure the server room, inspect systems for tampering, and rotate relevant credentials while preserving forensic evidence.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "MEDIUM",
+      "reputation_risk": "HIGH",
+      "response_proportionality": "IMMEDIATE_INTERVENTION",
+      "short_reason": "An unidentified person was confirmed inside a high-value restricted area after hours, creating a credible risk of tampering or unauthorized data access even though actual harm is not yet confirmed. The guard report is first-hand and supports immediate targeted containment, while the current evidence does not yet justify a facility-wide lockdown as the most proportionate first step.",
+      "urgency_level": "HIGH",
+      "user_impact": "MATERIAL",
+      "verdict_id": 0,
+      "verdict_label": "IMMEDIATE_INTERVENTION",
+      "what_not_to_do": "Do not delay containment while waiting for definitive proof of tampering or identity confirmation."
+    }
+  },
+  {
+    "caseId": 22,
+    "title": "Critical SaaS dependency suffers extended outage",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 22,
+      "compensation_review": "OPEN_AFTER_EXPOSURE_CONFIRMATION",
+      "confidence_score": 85,
+      "created_at": "2026-07-13T02:29:56.617601+00:00",
+      "crisis_classification": "ACTIVE_USER_HARM_EVENT",
+      "disclosure_recommendation": "DISCLOSE_WITHIN_2_HOURS",
+      "evidence_gaps": [
+        "No direct evidence yet on backlog size, number of blocked customers, or whether any safety-critical or SLA-bound cases are affected.",
+        "The submitted URL does not actually point to the vendor status page, reducing external corroboration quality.",
+        "No quantified estimate of manual triage capacity versus expected inbound email volume."
+      ],
+      "evidence_quality": "MEDIUM",
+      "follow_up_evidence_needed": [
+        "Current count of customers blocked from creating or updating tickets and age of the backlog.",
+        "Assessment of whether any affected cases involve safety, warranty, regulatory, or contractual SLA escalation.",
+        "Manual staffing plan, triage throughput estimate, and fallback process for preserving ticket context for later system reconciliation.",
+        "Direct vendor incident communications including ETA, root-cause updates, and restoration confidence."
+      ],
+      "harm_severity": "HIGH",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "HIGH",
+      "recommended_next_action": "Immediately launch the staffed temporary email support channel and publish clear customer instructions plus expected response-time caveats.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "MEDIUM",
+      "reputation_risk": "HIGH",
+      "response_proportionality": "IMMEDIATE_INTERVENTION",
+      "short_reason": "A 14-hour outage of the company-wide ticketing platform is already causing active customer harm by blocking support access, so waiting creates unnecessary operational and reputational exposure. A temporary email channel is proportionate, fast, and reversible, even though it is less efficient than the primary system. Confidence is tempered because the live URL provided does not corroborate the claimed vendor status history.",
+      "urgency_level": "HIGH",
+      "user_impact": "MATERIAL",
+      "verdict_id": 0,
+      "verdict_label": "IMMEDIATE_INTERVENTION",
+      "what_not_to_do": "Do not wait passively for vendor recovery while customers remain unable to submit or update urgent support issues."
+    }
+  },
+  {
+    "caseId": 23,
+    "title": "Former employee threatens legal action over wrongful termination",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 23,
+      "compensation_review": "OPEN_AFTER_EXPOSURE_CONFIRMATION",
+      "confidence_score": 85,
+      "created_at": "2026-07-13T02:32:08.819639+00:00",
+      "crisis_classification": "ACTIVE_USER_HARM_EVENT",
+      "disclosure_recommendation": "DISCLOSE_WITHIN_2_HOURS",
+      "evidence_gaps": [
+        "Gap in manager’s awareness of compliance complaint at time of termination decision"
+      ],
+      "evidence_quality": "MEDIUM",
+      "follow_up_evidence_needed": [
+        "Manager's communication logs prior to termination",
+        "Independent review of compliance complaint handling"
+      ],
+      "harm_severity": "HIGH",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "HIGH",
+      "recommended_next_action": "Immediately retain outside employment counsel and issue a litigation hold on all relevant records.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "MEDIUM",
+      "reputation_risk": "HIGH",
+      "response_proportionality": "IMMEDIATE_INTERVENTION",
+      "short_reason": "The threat of litigation for wrongful termination constitutes high legal and reputational risk, especially where retaliation is alleged. Evidence shows a close timing between complaint and termination, increasing exposure. Engaging counsel immediately protects the organization and aligns with best practices for legal preparedness.",
+      "urgency_level": "HIGH",
+      "user_impact": "MATERIAL",
+      "verdict_id": 0,
+      "verdict_label": "IMMEDIATE_INTERVENTION",
+      "what_not_to_do": "Do not engage directly with the former employee without legal counsel present."
+    }
+  },
+  {
+    "caseId": 24,
+    "title": "Coastal facility in path of an approaching hurricane",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 24,
+      "compensation_review": "OPEN_AFTER_EXPOSURE_CONFIRMATION",
+      "confidence_score": 90,
+      "created_at": "2026-07-13T02:34:47.438352+00:00",
+      "crisis_classification": "POTENTIAL_HARM_EVENT",
+      "disclosure_recommendation": "DISCLOSE_WITHIN_2_HOURS",
+      "evidence_gaps": [
+        "Specific storm surge height versus facility flood wall height",
+        "Real-time network capacity for massive workload migration"
+      ],
+      "evidence_quality": "MEDIUM",
+      "follow_up_evidence_needed": [
+        "Updated NWS surge height projections",
+        "Current failover bandwidth availability"
+      ],
+      "harm_severity": "HIGH",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "HIGH",
+      "recommended_next_action": "Initiate the failover sequence immediately to ensure completion before the projected 36-hour landfall window.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "MEDIUM",
+      "reputation_risk": "HIGH",
+      "response_proportionality": "IMMEDIATE_INTERVENTION",
+      "short_reason": "The failover process takes up to 24 hours, leaving only a 12-hour margin of error before landfall. Waiting for further forecast refinement risks an incomplete migration, leading to permanent data loss and catastrophic service failure.",
+      "urgency_level": "CRITICAL",
+      "user_impact": "MATERIAL",
+      "verdict_id": 0,
+      "verdict_label": "IMMEDIATE_INTERVENTION",
+      "what_not_to_do": "Do not wait for a perfect forecast, as the failover window nearly equals the time until landfall."
+    }
+  },
+  {
+    "caseId": 25,
+    "title": "Chemical spill at manufacturing plant reaches storm drain",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 25,
+      "compensation_review": "OPEN_AFTER_EXPOSURE_CONFIRMATION",
+      "confidence_score": 95,
+      "created_at": "2026-07-13T02:41:34.945227+00:00",
+      "crisis_classification": "ACTIVE_USER_HARM_EVENT",
+      "disclosure_recommendation": "DISCLOSE_WITHIN_2_HOURS",
+      "evidence_gaps": [
+        "Exact solvent concentration levels",
+        "Downstream flow rate of the creek",
+        "Specific toxicity profile of the solvent"
+      ],
+      "evidence_quality": "MEDIUM",
+      "follow_up_evidence_needed": [
+        "Lab-confirmed concentration results",
+        "Downstream water quality samples",
+        "Wildlife impact assessment"
+      ],
+      "harm_severity": "HIGH",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "HIGH",
+      "recommended_next_action": "Simultaneously deploy containment booms and submit the mandatory environmental notification.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "CRITICAL",
+      "reputation_risk": "HIGH",
+      "response_proportionality": "IMMEDIATE_INTERVENTION",
+      "short_reason": "The presence of solvent at the discharge point confirms an active leak into a public waterway. Immediate containment and legal notification are required to mitigate ecological damage and avoid severe regulatory penalties for non-disclosure.",
+      "urgency_level": "CRITICAL",
+      "user_impact": "MATERIAL",
+      "verdict_id": 0,
+      "verdict_label": "IMMEDIATE_INTERVENTION",
+      "what_not_to_do": "Do not delay regulatory notification to wait for precise concentration data, as this constitutes a legal breach."
+    }
+  },
+  {
+    "caseId": 26,
+    "title": "Nation-state actor suspected in network intrusion",
+    "status": "READY_FOR_REVIEW",
+    "verdict": {
+      "error": "no verdict"
+    }
+  }
+]

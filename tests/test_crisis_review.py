@@ -127,6 +127,61 @@ def test_request_crisis_review_fetches_live_evidence_urls(direct_vm, direct_depl
     assert case["status"] == "VERDICT_ISSUED"
 
 
+def test_validator_tolerates_adjacent_severity_and_proportionality(direct_vm, direct_deploy):
+    """Two independent LLM calls routinely land one step apart on a graded
+    scale (e.g. HIGH vs CRITICAL severity). The validator should still agree
+    as long as crisis_classification and recommended_response_option_id
+    match exactly — otherwise near-identical analyses spuriously go
+    UNDETERMINED."""
+    direct_vm.mock_llm(r".*", json.dumps(_mock_verdict(
+        harm_severity="HIGH", response_proportionality="IMMEDIATE_INTERVENTION",
+    )))
+
+    contract = direct_deploy("contracts/CrisisProof.py")
+    _create_reviewable_case(contract)
+    contract.request_crisis_review(0)
+
+    # Simulate the validator's independent re-execution landing one step
+    # away on each ordinal scale (CRITICAL vs HIGH, TARGETED vs IMMEDIATE).
+    direct_vm.clear_mocks()
+    direct_vm.mock_llm(r".*", json.dumps(_mock_verdict(
+        harm_severity="CRITICAL", response_proportionality="TARGETED_ACTION_REQUIRED",
+    )))
+    assert direct_vm.run_validator() is True
+
+
+def test_validator_rejects_disagreement_on_classification_or_far_severity(direct_vm, direct_deploy):
+    """A different crisis_classification, or a severity/proportionality gap
+    of 2+ steps, is a real disagreement and must still be rejected."""
+    direct_vm.mock_llm(r".*", json.dumps(_mock_verdict(
+        crisis_classification="ACTIVE_USER_HARM_EVENT",
+        harm_severity="HIGH", response_proportionality="IMMEDIATE_INTERVENTION",
+    )))
+
+    contract = direct_deploy("contracts/CrisisProof.py")
+    _create_reviewable_case(contract)
+    contract.request_crisis_review(0)
+
+    direct_vm.clear_mocks()
+    direct_vm.mock_llm(r".*", json.dumps(_mock_verdict(
+        crisis_classification="POTENTIAL_HARM_EVENT",
+        harm_severity="HIGH", response_proportionality="IMMEDIATE_INTERVENTION",
+    )))
+    assert direct_vm.run_validator() is False
+
+
+def test_validator_rejects_severity_gap_of_two_or_more_steps(direct_vm, direct_deploy):
+    direct_vm.mock_llm(r".*", json.dumps(_mock_verdict(harm_severity="LOW")))
+
+    contract = direct_deploy("contracts/CrisisProof.py")
+    _create_reviewable_case(contract)
+    contract.request_crisis_review(0)
+
+    direct_vm.clear_mocks()
+    direct_vm.mock_llm(r".*", json.dumps(_mock_verdict(harm_severity="CRITICAL")))
+    assert direct_vm.run_validator() is False
+
+
 def test_request_crisis_review_tolerates_unreachable_evidence_url(direct_vm, direct_deploy):
     """A broken/unmocked evidence URL must not block the review — the leader
     should fall back to the submitted evidence text for that source."""

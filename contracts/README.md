@@ -9,7 +9,7 @@
 5. Copy the deployed contract address
 6. Set in `.env.local`:
    ```
-   NEXT_PUBLIC_CRISISPROOF_CONTRACT_ADDRESS=0xb3D934870B115beeF6b5Ee8b8A1a290ECFeeBabB
+   NEXT_PUBLIC_CRISISPROOF_CONTRACT_ADDRESS=0x76E18c6e9027FB9b590F46c38FE6A4469950a817
    ```
 
 ## Contract Methods

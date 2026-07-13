@@ -49,3 +49,7 @@ __pycache__/
 .pytest_cache/
 artifacts/
 .venv_test/
+
+# generated seed account keys (never commit)
+scripts/.seed-account.local.json
+scripts/.verdict-spread-accounts.local.json

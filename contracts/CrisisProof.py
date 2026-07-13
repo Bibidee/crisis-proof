@@ -25,6 +25,24 @@ def safe_loads(raw: str, fallback):
 MAX_LIVE_SOURCES = 3
 MAX_SOURCE_CHARS = 800
 
+# Ordinal scales for tolerance-based comparison of graded verdict fields.
+# Two independent LLM calls on the same case routinely land one step apart
+# on a severity/proportionality scale; requiring exact equality on these
+# caused frequent UNDETERMINED transactions. Adjacent values are treated as
+# agreement; only a jump of 2+ steps counts as a real disagreement.
+HARM_SEVERITY_SCALE = ["NONE", "LOW", "MEDIUM", "HIGH", "CRITICAL"]
+RESPONSE_PROPORTIONALITY_SCALE = [
+    "NO_ACTION_NEEDED", "MONITORING_SUFFICIENT", "TARGETED_ACTION_REQUIRED",
+    "IMMEDIATE_INTERVENTION", "EMERGENCY_SHUTDOWN",
+]
+
+
+def ordinal_agree(scale, a, b, tolerance=1) -> bool:
+    try:
+        return abs(scale.index(a) - scale.index(b)) <= tolerance
+    except ValueError:
+        return str(a) == str(b)
+
 
 def fetch_live_sources(ev_list) -> str:
     """Independently re-fetch a bounded set of evidence URLs so the analyst
@@ -335,13 +353,10 @@ class CrisisProof(gl.Contract):
         )
 
         required_fields = ("crisis_classification", "recommended_response_option_id")
-        decision_fields = (
-            "crisis_classification",
-            "recommended_response_option_id",
-            "verdict_label",
-            "harm_severity",
-            "response_proportionality",
-        )
+        # Fields that must match exactly — the ones the app actually gates
+        # behavior on (which response option is recommended, how the case
+        # is classified).
+        exact_fields = ("crisis_classification", "recommended_response_option_id")
 
         def leader_fn() -> dict:
             live_sources = fetch_live_sources(ev_list)
@@ -368,9 +383,24 @@ class CrisisProof(gl.Contract):
             except Exception:
                 return False
             leader_data = leader_result.calldata
-            return all(
-                str(leader_data.get(f, "")) == str(validator_data.get(f, ""))
-                for f in decision_fields
+
+            if any(
+                str(leader_data.get(f, "")) != str(validator_data.get(f, ""))
+                for f in exact_fields
+            ):
+                return False
+
+            if not ordinal_agree(
+                HARM_SEVERITY_SCALE,
+                leader_data.get("harm_severity", ""),
+                validator_data.get("harm_severity", ""),
+            ):
+                return False
+
+            return ordinal_agree(
+                RESPONSE_PROPORTIONALITY_SCALE,
+                leader_data.get("response_proportionality", ""),
+                validator_data.get("response_proportionality", ""),
             )
 
         verdict_data = gl.vm.run_nondet_unsafe(leader_fn, validator_fn)

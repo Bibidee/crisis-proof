@@ -1,0 +1,163 @@
+[
+  {
+    "caseId": 0,
+    "owner": "0x189096a1f6d1D5440e6536E87Fc9CDae221d30B6",
+    "title": "Single customer reports a slow-loading checkout page",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 0,
+      "compensation_review": "NOT_APPLICABLE",
+      "confidence_score": 90,
+      "created_at": "2026-07-13T07:26:08.922041+00:00",
+      "crisis_classification": "UNCONFIRMED_INCIDENT",
+      "disclosure_recommendation": "NO_DISCLOSURE",
+      "evidence_gaps": [
+        "Lack of user demographic or device-specific data to confirm isolated nature of the issue"
+      ],
+      "evidence_quality": "HIGH",
+      "follow_up_evidence_needed": [
+        "Performance logs segmented by user device and geographic region during traffic spikes"
+      ],
+      "harm_severity": "NONE",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "LOW",
+      "recommended_next_action": "Log the incident and continue standard performance monitoring to detect any recurring patterns.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "LOW",
+      "reputation_risk": "LOW",
+      "response_proportionality": "MONITORING_SUFFICIENT",
+      "short_reason": "The reported issue is an isolated incident with no confirmed harm or systemic performance degradation. Automated monitoring data confirms the event falls within normal variance, and no errors occurred during the transaction. Proportional response is routine monitoring without immediate technical intervention.",
+      "urgency_level": "LOW",
+      "user_impact": "MINIMAL",
+      "verdict_id": 0,
+      "verdict_label": "MONITORING_SUFFICIENT",
+      "what_not_to_do": "Do not implement changes based on a single, low-impact report without broader evidence of systemic issues."
+    }
+  },
+  {
+    "caseId": 1,
+    "owner": "0xCb8749Ec93EFeeD3d65785Bd252B394548bD35Cc",
+    "title": "Marketing emails arriving with a 24-hour delay",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 1,
+      "compensation_review": "NOT_APPLICABLE",
+      "confidence_score": 72,
+      "created_at": "2026-07-13T07:27:26.623379+00:00",
+      "crisis_classification": "OPERATIONAL_CRISIS",
+      "disclosure_recommendation": "INTERNAL_ONLY",
+      "evidence_gaps": "The submitted evidence URL resolves to a generic Wikipedia article on email rather than actual support ticket data, meaning the threefold ticket increase cannot be independently corroborated from the cited source; no provider-side queue metrics or SLA documentation have been submitted; and there is no data on whether the delay is worsening, stable, or self-resolving.",
+      "evidence_quality": "MEDIUM",
+      "follow_up_evidence_needed": [
+        "Email service provider's queue depth and processing metrics for the marketing send pipeline",
+        "Provider's incident or status page acknowledgment, or formal SLA response to an escalation ticket",
+        "Historical baseline of marketing email delivery times to confirm the 24-hour delay is a recent anomaly",
+        "Segmented ticket data showing whether affected customers are concentrated in a specific list segment, send time, or geographic region",
+        "Internal SLA or contractual obligations to marketing email subscribers that could create reputational or legal exposure if delays persist"
+      ],
+      "harm_severity": "LOW",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "MEDIUM",
+      "recommended_next_action": "Open a formal escalation ticket with the email service provider today, simultaneously monitoring queue depth for any worsening trend, with a clear internal threshold (e.g., delays exceeding 48 hours or ticket volume doubling again) that triggers reassessment of the failover option.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "LOW",
+      "reputation_risk": "MEDIUM",
+      "response_proportionality": "TARGETED_ACTION_REQUIRED",
+      "short_reason": "The incident affects roughly 500 marketing email subscribers with a minor inconvenience — a 24-hour promotional delay — and critically, transactional emails remain unaffected, limiting both user harm and regulatory exposure. The evidence base is operationally plausible but the cited URL provides no corroborating data, reducing confidence. A structured monitor-and-escalate approach is proportionate given the low harm severity and the 3-day decision window, while preserving the failover option as a contingency if the provider fails to respond or delays worsen materially.",
+      "urgency_level": "MEDIUM",
+      "user_impact": "MINIMAL",
+      "verdict_id": 0,
+      "verdict_label": "MONITORING_SUFFICIENT",
+      "what_not_to_do": "Do not immediately failover to a backup email provider without first formally escalating to the current provider, as a hasty switch risks deliverability and spam reputation issues that could cause greater harm than the existing 24-hour delay."
+    }
+  },
+  {
+    "caseId": 2,
+    "owner": "0xCa360741DC1AdB32BAeB1d338730098c6EDd2a54",
+    "title": "Intermittent login failures on the mobile app",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 2,
+      "compensation_review": "OPEN_AFTER_EXPOSURE_CONFIRMATION",
+      "confidence_score": 85,
+      "created_at": "2026-07-13T07:46:44.868752+00:00",
+      "crisis_classification": "ACTIVE_USER_HARM_EVENT",
+      "disclosure_recommendation": "DISCLOSE_WITHIN_2_HOURS",
+      "evidence_gaps": [
+        "LIVE_SOURCE_DOES_NOT_SUPPORT_ROOT_CAUSE_CLAIM"
+      ],
+      "evidence_quality": "MEDIUM",
+      "follow_up_evidence_needed": [
+        "Post-deployment monitoring of login success rates after fix deployment"
+      ],
+      "harm_severity": "HIGH",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "HIGH",
+      "recommended_next_action": "Deploy the targeted fix immediately to address the likely token refresh issue.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "MEDIUM",
+      "reputation_risk": "HIGH",
+      "response_proportionality": "IMMEDIATE_INTERVENTION",
+      "short_reason": "Login failures are causing user frustration and abandonment, with evidence pointing to a specific subsystem. A targeted fix is proportionate and reversible, avoiding unnecessary rollback of unrelated improvements.",
+      "urgency_level": "HIGH",
+      "user_impact": "MATERIAL",
+      "verdict_id": 0,
+      "verdict_label": "IMMEDIATE_INTERVENTION",
+      "what_not_to_do": "Do not delay action pending full root cause confirmation, as user frustration is already material."
+    }
+  },
+  {
+    "caseId": 3,
+    "owner": "0x32f387e030467fdf0d7b197a7d0E3679351AA932",
+    "title": "Automated trading system executing erroneous large-volume trades",
+    "status": "VERDICT_ISSUED",
+    "verdict": {
+      "case_id": 3,
+      "compensation_review": "OPEN_IMMEDIATELY",
+      "confidence_score": 92,
+      "created_at": "2026-07-13T07:48:25.959705+00:00",
+      "crisis_classification": "ACTIVE_USER_HARM_EVENT",
+      "disclosure_recommendation": "DISCLOSE_WITHIN_2_HOURS",
+      "evidence_gaps": [
+        "Precise root-cause isolation of the malfunctioning strategy or code path has not yet been confirmed.",
+        "Current estimate of total exposure by client account, asset class, and venue is not provided.",
+        "Independent confirmation that the full shutdown mechanism will halt all active order generation and routing is not yet documented.",
+        "Status of open orders, partial fills, and market counterparty obligations is not yet summarized."
+      ],
+      "evidence_quality": "MEDIUM_HIGH",
+      "follow_up_evidence_needed": [
+        "Order blotter and venue-level cancel/replace status for all live orders.",
+        "Per-account loss and exposure reconciliation, including realized and unrealized impact.",
+        "Technical incident timeline identifying the defective release, parameter change, or dependency failure.",
+        "Verification logs proving the emergency shutdown fully stopped new order generation.",
+        "Legal and compliance assessment of market, client, and regulator notification obligations."
+      ],
+      "harm_severity": "CRITICAL",
+      "key_contradictory_evidence": [],
+      "key_supporting_evidence": [
+        "evidence_0"
+      ],
+      "operational_risk": "CRITICAL",
+      "recommended_next_action": "Trigger the full trading-system kill switch immediately, then isolate the faulty strategy and quantify exposure account by account.",
+      "recommended_response_option_id": "option_0",
+      "regulatory_risk": "HIGH",
+      "reputation_risk": "HIGH",
+      "response_proportionality": "EMERGENCY_SHUTDOWN",
+      "short_reason": "The incident is causing active, ongoing financial harm across client and firm accounts, and the submitted monitoring evidence is real-time and cross-checked against trade confirmations. Given losses are accruing every second and a targeted shutdown risks misdiagnosis, the most defensible action is an immediate full kill switch despite disruption to legitimate in-flight trades.",
+      "urgency_level": "CRITICAL",
+      "user_impact": "CRITICAL",
+      "verdict_id": 0,
+      "verdict_label": "IMMEDIATE_INTERVENTION",
+      "what_not_to_do": "Do not delay shutdown while attempting finer diagnosis if uncontrolled trading is still active."
+    }
+  }
+]
