@@ -22,6 +22,35 @@ def safe_loads(raw: str, fallback):
         return fallback
 
 
+MAX_LIVE_SOURCES = 3
+MAX_SOURCE_CHARS = 800
+
+
+def fetch_live_sources(ev_list) -> str:
+    """Independently re-fetch a bounded set of evidence URLs so the analyst
+    prompt is grounded in live source content, not just the submitter's
+    claims. Called separately by the leader and each validator; failures on
+    individual URLs are swallowed so one broken link can't block review."""
+    parts = []
+    for e in ev_list[:MAX_LIVE_SOURCES]:
+        url = (e.get("url") or "").strip()
+        if not url.lower().startswith(("http://", "https://")):
+            continue
+        try:
+            content = gl.nondet.web.render(url, mode="text")
+        except Exception:
+            continue
+        if not content:
+            continue
+        snippet = content.strip()[:MAX_SOURCE_CHARS]
+        if snippet:
+            parts.append(f"[{e.get('id', '')}] {url}\n{snippet}")
+
+    if not parts:
+        return "No live source content could be fetched; rely on the submitted evidence summaries only."
+    return "\n\n".join(parts)
+
+
 class CrisisProof(gl.Contract):
     case_count: u256
     cases: TreeMap[str, str]
@@ -305,60 +334,46 @@ class CrisisProof(gl.Contract):
             "Return ONLY the JSON object, no markdown fences, no extra text."
         )
 
-        task = (
-            "Evaluate this institutional crisis case against all submitted evidence and response options. "
-            "Produce a structured verdict recommending the best response option and classifying the crisis."
+        required_fields = ("crisis_classification", "recommended_response_option_id")
+        decision_fields = (
+            "crisis_classification",
+            "recommended_response_option_id",
+            "verdict_label",
+            "harm_severity",
+            "response_proportionality",
         )
 
-        criteria = (
-            "The output must be a valid JSON object with keys: crisis_classification, recommended_response_option_id, "
-            "verdict_label, confidence_score, harm_severity, urgency_level, evidence_quality, user_impact, "
-            "operational_risk, reputation_risk, regulatory_risk, response_proportionality, "
-            "disclosure_recommendation, compensation_review, what_not_to_do, recommended_next_action, "
-            "key_supporting_evidence, key_contradictory_evidence, evidence_gaps, short_reason, follow_up_evidence_needed. "
-            "confidence_score must be an integer 0-100. "
-            "key_supporting_evidence, key_contradictory_evidence, evidence_gaps, and follow_up_evidence_needed must be arrays. "
-            "The reasoning must be honest about uncertainty."
-        )
+        def leader_fn() -> dict:
+            live_sources = fetch_live_sources(ev_list)
+            full_prompt = (
+                prompt_text
+                + "\n\nLIVE SOURCE CONTEXT (independently fetched from the evidence URLs above; "
+                "use it to corroborate or challenge the submitted evidence, and note any discrepancy "
+                "in short_reason or evidence_gaps):\n"
+                + live_sources
+                + "\n"
+            )
+            response = gl.nondet.exec_prompt(full_prompt, response_format="json")
+            if not isinstance(response, dict):
+                raise gl.UserError("Crisis review LLM did not return a JSON object")
+            if any(not response.get(f) for f in required_fields):
+                raise gl.UserError("Crisis review LLM output missing required verdict fields")
+            return response
 
-        def nondet_review() -> str:
-            return prompt_text
+        def validator_fn(leader_result) -> bool:
+            if not isinstance(leader_result, gl.vm.Return):
+                return False
+            try:
+                validator_data = leader_fn()
+            except Exception:
+                return False
+            leader_data = leader_result.calldata
+            return all(
+                str(leader_data.get(f, "")) == str(validator_data.get(f, ""))
+                for f in decision_fields
+            )
 
-        result_raw = gl.eq_principle.prompt_non_comparative(
-            nondet_review,
-            task=task,
-            criteria=criteria,
-        )
-
-        verdict_data = safe_loads(
-            result_raw.strip() if isinstance(result_raw, str) else str(result_raw),
-            None,
-        )
-
-        if not verdict_data or not isinstance(verdict_data, dict):
-            verdict_data = {
-                "crisis_classification": "UNCONFIRMED_INCIDENT",
-                "recommended_response_option_id": "option_0",
-                "verdict_label": "REVIEW_FAILED",
-                "confidence_score": 0,
-                "harm_severity": "NONE",
-                "urgency_level": case.get("urgency_level", "MEDIUM"),
-                "evidence_quality": "INSUFFICIENT",
-                "user_impact": "NONE",
-                "operational_risk": "LOW",
-                "reputation_risk": "LOW",
-                "regulatory_risk": "LOW",
-                "response_proportionality": "MONITORING_SUFFICIENT",
-                "disclosure_recommendation": "INTERNAL_ONLY",
-                "compensation_review": "NOT_APPLICABLE",
-                "what_not_to_do": "Do not act on unverified information.",
-                "recommended_next_action": "Escalate to human review — verdict could not be parsed.",
-                "key_supporting_evidence": [],
-                "key_contradictory_evidence": [],
-                "evidence_gaps": ["Unable to assess — parse error"],
-                "short_reason": "Verdict could not be parsed from AI output. Human review required.",
-                "follow_up_evidence_needed": [],
-            }
+        verdict_data = gl.vm.run_nondet_unsafe(leader_fn, validator_fn)
 
         v_count = self._verdict_count(case_id)
         verdict_record = {

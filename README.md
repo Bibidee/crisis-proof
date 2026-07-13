@@ -22,7 +22,7 @@ The result is a tamper-proof, publicly auditable crisis verdict: what to do, wha
 
 Deployed on GenLayer StudioNet:
 ```
-0x558970C48Ede147EA328dc09F5Ff0c394Aa2f7F7
+0xb3D934870B115beeF6b5Ee8b8A1a290ECFeeBabB
 ```
 
 ## How It Works
@@ -56,7 +56,7 @@ Create `.env.local`:
 NEXT_PUBLIC_GENLAYER_RPC_URL=https://studio.genlayer.com/api
 NEXT_PUBLIC_GENLAYER_CHAIN_ID=61999
 NEXT_PUBLIC_GENLAYER_EXPLORER_URL=https://explorer-studio.genlayer.com
-NEXT_PUBLIC_CRISISPROOF_CONTRACT_ADDRESS=0x558970C48Ede147EA328dc09F5Ff0c394Aa2f7F7
+NEXT_PUBLIC_CRISISPROOF_CONTRACT_ADDRESS=0xb3D934870B115beeF6b5Ee8b8A1a290ECFeeBabB
 ```
 
 Open [http://localhost:3000](http://localhost:3000)
