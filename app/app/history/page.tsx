@@ -3,11 +3,12 @@
 import { useEffect, useState } from "react";
 import { getCaseCount, getCase, getLatestVerdict } from "@/lib/genlayer/crisisproof";
 import { hasContract } from "@/lib/genlayer/client";
+import { fetchSequentially } from "@/lib/genlayer/batch";
 import { CrisisCase, CrisisVerdict } from "@/lib/genlayer/types";
 import { Badge } from "@/components/ui/Badge";
 import { statusColor, urgencyBg, formatDate, confidenceBand } from "@/lib/utils/formatting";
 import Link from "next/link";
-import { Loader, Clock, ExternalLink } from "lucide-react";
+import { Loader, Clock, ExternalLink, AlertTriangle } from "lucide-react";
 import { buildExplorerAddressUrl } from "@/lib/genlayer/crisisproof";
 import { CONTRACT_ADDRESS } from "@/lib/genlayer/constants";
 
@@ -16,21 +17,27 @@ interface CaseWithVerdict { case: CrisisCase; verdict: CrisisVerdict | null; }
 export default function HistoryPage() {
   const [items, setItems] = useState<CaseWithVerdict[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     if (!hasContract()) { setLoading(false); return; }
+    setError(null);
     getCaseCount()
-      .then(async (count) => {
-        const all = await Promise.all(
-          Array.from({ length: count }, async (_, i) => {
-            const c = await getCase(i);
-            const v = await getLatestVerdict(i);
-            return { case: c, verdict: v };
-          })
-        );
-        setItems(all);
+      .then((count) =>
+        // Fetched sequentially with backoff — Studio rate-limits reads per
+        // contract, and firing them all in parallel reliably fails once
+        // there are more than a handful of cases.
+        fetchSequentially(count, async (i) => {
+          const c = await getCase(i);
+          const v = await getLatestVerdict(i);
+          return { case: c, verdict: v };
+        })
+      )
+      .then(setItems)
+      .catch((err) => {
+        console.error(err);
+        setError(err instanceof Error ? err.message : "Failed to load cases");
       })
-      .catch(console.error)
       .finally(() => setLoading(false));
   }, []);
 
@@ -54,13 +61,21 @@ export default function HistoryPage() {
 
       {loading && <div className="flex justify-center py-12"><Loader className="w-5 h-5 text-redline animate-spin" /></div>}
 
-      {!loading && items.length === 0 && (
+      {!loading && error && (
+        <div className="text-center py-16 border border-dashed border-redline/40 rounded-lg space-y-2">
+          <AlertTriangle className="w-5 h-5 text-redline mx-auto" />
+          <p className="text-redline font-mono text-sm">Failed to load cases: {error}</p>
+          <p className="text-muted-text font-mono text-xs">GenLayer Studio may be rate-limiting reads — try refreshing in a moment.</p>
+        </div>
+      )}
+
+      {!loading && !error && items.length === 0 && (
         <div className="text-center py-16 border border-dashed border-border-steel rounded-lg">
           <p className="text-muted-text font-mono">No cases found</p>
         </div>
       )}
 
-      {!loading && items.length > 0 && (
+      {!loading && !error && items.length > 0 && (
         <div className="space-y-3">
           {items.map(({ case: c, verdict: v }) => (
             <Link key={c.case_id} href={`/app/cases/${c.case_id}/verdict`}>

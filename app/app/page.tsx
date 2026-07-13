@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 import { useWallet } from "@/lib/context/WalletContext";
 import { getUserCaseIds, getCase } from "@/lib/genlayer/crisisproof";
 import { hasContract } from "@/lib/genlayer/client";
+import { fetchSequentially } from "@/lib/genlayer/batch";
 import { CrisisCase } from "@/lib/genlayer/types";
 import { Button } from "@/components/ui/Button";
 import { statusColor, urgencyBg, formatDate } from "@/lib/utils/formatting";
@@ -24,8 +25,7 @@ function Dashboard() {
   async function fetchCases() {
     if (!address || !hasContract()) return [];
     const ids = await getUserCaseIds(address);
-    const all = await Promise.all(ids.map((id) => getCase(id)));
-    return all;
+    return fetchSequentially(ids.length, (i) => getCase(ids[i]));
   }
 
   useEffect(() => {
